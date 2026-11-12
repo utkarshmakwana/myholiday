@@ -1,0 +1,2050 @@
+# Product Requirements Document (PRD)
+
+# myholidayNow – Holiday Membership, Travel & Resort Booking Platform
+
+Product specification
+
+Website + Web Application
+
+# myholidayNow
+
+Premium Holiday Membership & Travel Experience Platform
+
+Product reference: MyHolidayz, VentureVibe Global Hoppers, Club Mahindra and Club Nebula.
+
+Proposed domain: myholidays.in
+
+Product vision: Build a premium holiday membership platform where customers can explore destinations, purchase holiday memberships, access exclusive resort benefits, manage membership entitlements, book holidays and manage their complete travel experience online.
+
+## 1. Executive summary
+
+The objective is to develop a premium holiday membership and travel booking website for myholidayNow, using the existing MyHolidayz website as the starting business reference and taking inspiration from the membership experience offered by Club Mahindra and Club Nebula.
+
+The platform should not be limited to a normal travel booking website.
+
+It should combine three major business models:
+
+1. Holiday membership business: Customers purchase a membership for a defined period and receive specified holiday entitlements and benefits.
+2. Holiday booking marketplace: Customers explore resorts, destinations, packages and available holiday options.
+3. Membership management platform: Existing members log in, view their benefits, check eligibility, request or book holidays, manage payments and track reservations.
+
+The website should have two distinct experiences:
+
+- Public-facing marketing website for attracting and converting new members.
+- Logged-in member portal for managing memberships and holiday reservations.
+
+It should also provide a powerful internal CRM and admin panel for managing leads, membership sales, resorts, bookings, payments and customer support.
+
+## 2. Competitor and reference website analysis
+
+The following websites provide the design and business-model references for this project.
+
+[Sterling Membership Plan Benefits - Pay Once and Holiday for Next 10 Years](https://images.openai.com/static-rsc-4/wyHzpfd-M24BljZ8B8YtAVWyNOrxtTc3Wr4fc8Y9u8IS5xBYPurG_ckDOUiXJTkkW5-3RZFyvOutum6SnBW2k7XEVMgG1bucR7GwLvIMzmtEJnMBD8vjym2LTy8Qciu0Yj1Wxx9y5mM0__Lf-9uC4Zj6M11LcpFGk1YV-44heIY?purpose=inline)
+
+1\. MyHolidayz
+
+[myholidayz.in](https://www.myholidayz.in/?utm_source=chatgpt.com)
+
+Primary reference for the existing business, resort network, membership plans, enquiry forms, partner hotels and holiday benefits.
+
+[DesignGen | Top-notch design](https://images.openai.com/static-rsc-4/_wZqZTarJ1ZW94-FIrIF80CNZEsYE4cVpyK-fjxkGDmo2Hy1WNOtb9j1NqtuUHka9H4zvr_tqa130FwI_bXvE2NAdNQ7FDmbiro1eRpgUqttSLzpHVkJl4liRkNXvckJIiEN83oDYgRa_1nn-X7OIABbs2d9sRt8cRS6IIfdqzk?purpose=inline)
+
+2\. VentureVibe Global Hoppers
+
+[venturevibeglobalhoppers.com](https://www.venturevibeglobalhoppers.com/?utm_source=chatgpt.com)
+
+Reference for premium travel membership positioning, holiday discovery and membership marketing. The website's detailed content could not be reliably extracted, so its exact workflows need manual verification.
+
+[Club Mahindra](https://images.openai.com/static-rsc-4/xwOJ1Z27DrlATY8sRKPYfkjVfq5idXeErWjUEftR9sQDEv-_ANdjz0XMVLLcpIO0XxjJohT8-OuIdmpKrQNtWnVDlsut6xyjfQnyDZO1g8294GKj6BD6ugc5A7w32HrMth05tBsZuWMdogmFTl6o-PX3-uD5ueuOamNMPGRqIrE?purpose=inline)
+
+3\. Club Mahindra
+
+[clubmahindra.com](https://www.clubmahindra.com/?utm_source=chatgpt.com)
+
+Reference for resort discovery, premium brand positioning, membership comparison, holiday entitlements, member benefits and booking experience.
+
+[Club Mahindra - Resort Escapes](https://images.openai.com/static-rsc-4/d_9K8KI9LuJOKjexcL0cwdBTzSYO7t54m8u8uoVQ9ITWWJnhyojUUVEivBuiCRKBZgjd0XBEtR_B1ExVzzjwHPzhAqu7QfzaaWZ2BMWxiQM1YursCWuy647aQU_pbRxKxIhOe-vviGYpVqFR-RU1zMTnkySw6FdQ7CM9Zms1bAM?purpose=inline)
+
+4\. Club Nebula
+
+[clubnebula.com](https://clubnebula.com/?utm_source=chatgpt.com)
+
+Reference for membership tenure, room categories, annual holiday entitlements, resort exchange, membership benefits and its distinctive holiday/revenue model.
+
+### What we should take from each competitor
+
+| Reference     | Functional inspiration                     | myholidayNow implementation                               |
+| ------------- | ------------------------------------------ | --------------------------------------------------------- |
+| MyHolidayz    | Existing business and resort catalogue     | Improved public website and lead conversion               |
+| VentureVibe   | Membership marketing                       | Premium membership presentation                           |
+| Club Mahindra | Membership tiers and booking experience    | Membership comparison and entitlement management          |
+| Club Nebula   | Flexible membership and vacation ownership | Membership rules, booking privileges and benefit tracking |
+
+Important business-model observation: Club Mahindra describes annual holiday entitlements over different membership tenures, while Club Nebula's published FAQ describes four plans with different room categories and tenures, including its distinctive annual maintenance and unutilized-entitlement model. These are different commercial models. myholidayNow should define its own transparent terms rather than copying either model blindly.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.clubmahindra.com\&sz=32)
+
+Club Mahindra+3
+
+
+
+## 3. Existing MyHolidayz website – current business structure
+
+The existing website already provides a useful starting structure:
+
+- Premium holiday membership.
+- Resort discovery.
+- Partner hotel network.
+- Domestic and international membership plans.
+- Resort galleries.
+- Membership enquiry forms.
+- Customer testimonials.
+- Contact information.
+- Membership benefits.
+
+It currently presents four membership products:
+
+| Plan           | Tenure  | Destination coverage     |
+| -------------- | ------- | ------------------------ |
+| Escape Select  | 3 years | Domestic                 |
+| Escape Elite   | 5 years | Domestic                 |
+| Explore Select | 3 years | Domestic + International |
+| Explore Elite  | 5 years | Domestic + International |
+
+The existing website advertises access to 240+ resorts and 50+ destinations. These numbers and all resort partnerships must be verified before being carried into the new website.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.myholidayz.in\&sz=32)
+
+MyHoliday
+
+
+
+### Proposed transformation
+
+myholidayNow – Main Website
+
+Marketing, destination discovery and membership sales
+
+Public Website
+
+Memberships, resorts, packages, enquiries, offers
+
+Member Portal
+
+Membership, entitlements, bookings, payments, support
+
+Sales CRM
+
+Leads, follow-ups, sales, membership conversion
+
+Admin & Operations
+
+Resorts, availability, reservations, finance
+
+Central Backend + Database + Integrations
+
+# 4. Product goals and business objectives
+
+The website should achieve the following business goals:
+
+| Goal                  | Description                                                   |
+| --------------------- | ------------------------------------------------------------- |
+| Membership sales      | Convert website visitors into paid holiday members            |
+| Lead generation       | Capture enquiries from potential customers                    |
+| Resort discovery      | Showcase domestic and international resorts                   |
+| Membership comparison | Help users choose the right membership                        |
+| Online booking        | Allow existing members to request and manage reservations     |
+| Customer retention    | Encourage members to use their annual holiday benefits        |
+| Upselling             | Encourage membership upgrades and additional travel purchases |
+| Customer service      | Centralize member communication and support                   |
+| Sales automation      | Help the sales team track enquiries and conversions           |
+| Business analytics    | Track membership sales, bookings and revenue                  |
+
+## 5. Target audience
+
+### Primary customers
+
+1. Families planning regular annual vacations.
+2. Couples looking for premium holiday experiences.
+3. Business professionals looking for planned holidays.
+4. Frequent domestic travellers.
+5. International holiday travellers.
+6. Senior citizens and retired couples.
+7. Customers looking for long-term holiday memberships.
+8. Corporate groups and business travel customers.
+
+### Internal users
+
+- Super Admin
+- Business Owner
+- Sales Manager
+- Sales Executive
+- Membership Manager
+- Reservation Executive
+- Customer Support Executive
+- Finance Manager
+- Resort/Vendor Manager
+- Marketing Manager
+- Content Manager
+
+# 6. Website sitemap and complete page structure
+
+The proposed website should have the following structure.
+
+## myholidayNow website structure
+
+HOME
+
+Company
+
+• About Us
+
+• Why myholidayNow
+
+• Our Story
+
+• Our Partners
+
+Membership
+
+• Membership Plans
+
+• Compare Plans
+
+• Membership Benefits
+
+• FAQs
+
+Explore
+
+• All Resorts
+
+• Destinations
+
+• Domestic Holidays
+
+• International Holidays
+
+Holiday Packages
+
+• Family Packages
+
+• Honeymoon
+
+• Group Tours
+
+• Customized Holidays
+
+Member Services
+
+• Member Login
+
+• How to Book
+
+• Member Benefits
+
+• Support
+
+Conversion
+
+• Offers
+
+• Testimonials
+
+• Enquire Now
+
+• Contact Us
+
+Member Portal / Admin / Sales CRM
+
+### 6.1 Home page
+
+[Membership Tiers — Silver, Gold & Platinum | Raviz Priviliz](https://images.openai.com/static-rsc-4/Oa2kNTv_uh7oJt2x2kKLHSEEEoYFNf1a7AlTmw-SeLwgKC7kprDUSuLx55CIwogPIt8MsiMBHEuh11WjifCqc0G8Zop-_v0EorrUenrCEXXmBVnHal3ETwBb7IrvmWmO-DUyxK4AwR9V94dqU91yI6RuljtzdSo-sO4Wi5mNKf0?purpose=inline)
+
+[theravizpriviliz.com](https://www.theravizpriviliz.com/membership?utm_source=chatgpt.com)
+
+The homepage is the most important marketing and conversion page.
+
+Sections:
+
+1. Top announcement bar.
+   - Membership offers.
+   - Customer support number.
+   - Member login.
+2. Header navigation.
+   - Logo.
+   - Home.
+   - Membership.
+   - Resorts.
+   - Destinations.
+   - Holiday Packages.
+   - About Us.
+   - Contact.
+   - Enquire Now.
+3. Hero section.
+   - Large premium resort background image/video.
+   - Headline: "Your Holidays. Your World. Your Membership."
+   - Subheading describing membership benefits.
+   - Explore Membership button.
+   - Explore Resorts button.
+4. Quick holiday discovery.
+   - Destination.
+   - Travel date.
+   - Number of travellers.
+   - Holiday type.
+5. Membership benefits.
+   - Annual holidays.
+   - Premium resort access.
+   - Exclusive member privileges.
+   - Dedicated travel support.
+   - Flexible booking options.
+6. Featured membership plans.
+7. Popular destinations.
+8. Featured resorts.
+9. Domestic and international holiday collections.
+10. How membership works.
+11. Membership comparison.
+12. Holiday experiences.
+13. Partner hotel and resort logos.
+14. Customer testimonials.
+15. Travel gallery.
+16. Frequently asked questions.
+17. Membership enquiry form.
+18. Newsletter subscription.
+19. Footer.
+
+### 6.2 About Us page
+
+- Company introduction.
+- Company vision.
+- Company mission.
+- Brand story.
+- Why choose myholidayNow.
+- Our travel philosophy.
+- Our hospitality network.
+- Our resort partners.
+- Customer-first approach.
+- Quality standards.
+- Company achievements.
+- Contact information.
+
+### 6.3 Membership listing page
+
+[Inspirato - Subscription-based luxury stays | Digital Tourism Think Tank](https://images.openai.com/static-rsc-4/xHgByeGJzAQgfIkQgOIVSD543VTfXUN3R_hw9IqBlU6uvs3Ck_jdhU47dFf4Qzgchqw2VU3Csl1cUP0KxyMzYke3udvKfB9LZk1O7FFasuzs0KHl9UC0gQEG3A9AmmXsen_ZfxoxRE2IJ2AlpBD8wdbiMpkFPc2rxdsWWLj2iUA?purpose=inline)
+
+[thinkdigital.travel](https://www.thinkdigital.travel/cases/inspirato-subscription-based-luxury-stays?utm_source=chatgpt.com)
+
+This page will showcase all available holiday membership products.
+
+Each membership card should contain:
+
+- Membership name.
+- Membership category.
+- Domestic/international access.
+- Membership tenure.
+- Annual holiday entitlement.
+- Eligible room category.
+- Maximum occupancy.
+- Included destinations.
+- Included resorts.
+- Booking privileges.
+- Seasonal eligibility.
+- Member benefits.
+- Payment options.
+- Applicable charges.
+- Enquire Now button.
+- Download brochure button.
+
+Initial membership products to carry forward from the existing business website:
+
+| Plan           | Tenure  | Coverage                 |
+| -------------- | ------- | ------------------------ |
+| Escape Select  | 3 years | Domestic                 |
+| Escape Elite   | 5 years | Domestic                 |
+| Explore Select | 3 years | Domestic + International |
+| Explore Elite  | 5 years | Domestic + International |
+
+These are the existing advertised plan names, not a final approved pricing or entitlement specification.
+
+### 6.4 Membership comparison page
+
+This is a very important conversion feature.
+
+Users should be able to compare two or more membership plans side by side.
+
+| Comparison criteria   | Escape Select | Escape Elite | Explore Select | Explore Elite |
+| --------------------- | ------------- | ------------ | -------------- | ------------- |
+| Membership tenure     | 3 years       | 5 years      | 3 years        | 5 years       |
+| Domestic resorts      | Yes           | Yes          | Yes            | Yes           |
+| International resorts | To confirm    | To confirm   | Yes            | Yes           |
+| Annual holiday nights | To configure  | To configure | To configure   | To configure  |
+| Room category         | To configure  | To configure | To configure   | To configure  |
+| Priority booking      | To configure  | To configure | To configure   | To configure  |
+| Guest benefits        | To configure  | To configure | To configure   | To configure  |
+| Payment options       | To configure  | To configure | To configure   | To configure  |
+| Additional benefits   | To configure  | To configure | To configure   | To configure  |
+
+Comparison controls:
+
+- Highlight recommended plan.
+- Show plan differences.
+- Show full terms and conditions.
+- Download comparison.
+- Enquire about selected plan.
+- Request a callback.
+
+### 6.5 Membership detail page
+
+Each plan should have a dedicated landing page.
+
+Sections:
+
+- Plan introduction.
+- Membership duration.
+- Holiday entitlements.
+- Resort access.
+- Domestic/international coverage.
+- Room categories.
+- Included benefits.
+- Booking rules.
+- Payment options.
+- Additional charges.
+- Terms and conditions.
+- Customer testimonials.
+- FAQs.
+- Enquiry form.
+
+### 6.6 Resort listing page
+
+[Why Pacific Northwest X-Ray’s Website Fails: A UX Heuristic Breakdown | by Priyanka Veeramosu | Medium](https://images.openai.com/static-rsc-4/hFuYUCdY9fCVD-TMSmohKhO3ejigsYJ_obESG4902xEBhYLMJfNxQfO--1toRs_vx6dvwwGIv_HZiQvvM80j8lRGZoSC6pQeh9aRwUPd_8jploPf8_QBRGwx2HHQzdL_88GUQKzUsIjhFg2mOP4HzO2o9rKYFj42QiN-qHm6i9I?purpose=inline)
+
+[medium.com](https://medium.com/%40priyanka_v/why-pacific-northwest-x-rays-website-fails-a-ux-heuristic-breakdown-7c46f25a59a6?utm_source=chatgpt.com)
+
+This page will act as the resort discovery catalogue.
+
+Search filters:
+
+- Country.
+- State.
+- City.
+- Destination.
+- Resort category.
+- Star rating.
+- Resort amenities.
+- Room category.
+- Domestic/international.
+- Membership eligibility.
+- Family-friendly.
+- Beach resorts.
+- Hill resorts.
+- Luxury resorts.
+- Spa and wellness.
+- Adventure resorts.
+
+Resort listing card:
+
+- Resort image.
+- Resort name.
+- Location.
+- Star rating.
+- Short description.
+- Amenities.
+- Available room categories.
+- Member eligibility.
+- View Details button.
+
+### 6.7 Resort detail page
+
+[Book Hotel Rooms, Cottages & Tent Suites at Taj Aravali Resort & Spa, Udaipur](https://images.openai.com/static-rsc-4/Le0J3Hvnt4jISvlhETV2wE-VCDq5rEu-PWOGut__-wl2akqSgWJK1PULPyleZnhqhYhhaZO2b59fDaL4Epx12aso-X__CrsfYeMYRkxcfra3p84jzn4RsqXLSCoxRVN3RUrKOAfL1mmdiGqvPOys2piaRBG4cU1lMHljUy1JF4c?purpose=inline)
+
+[tajhotels.com](https://www.tajhotels.com/en-in/hotels/taj-aravali-udaipur/rooms-and-suites?utm_source=chatgpt.com)
+
+Each resort should have a detailed page.
+
+Features:
+
+- Resort name.
+- Location.
+- Image gallery.
+- Video gallery.
+- Resort overview.
+- Room types.
+- Room images.
+- Room occupancy.
+- Amenities.
+- Restaurant information.
+- Swimming pool.
+- Spa and wellness.
+- Indoor/outdoor activities.
+- Nearby attractions.
+- Google Maps location.
+- Check-in/check-out information.
+- Member booking eligibility.
+- Non-member booking eligibility, if offered.
+- Membership benefit details.
+- Enquiry form.
+- Book Now / Request Booking.
+
+### 6.8 Destination pages
+
+- Domestic destinations.
+- International destinations.
+- Destination categories.
+- Country-wise destinations.
+- City-wise destinations.
+- Popular tourist destinations.
+- Seasonal destinations.
+- Destination overview.
+- Weather and travel season information.
+- Nearby resorts.
+- Available packages.
+- Destination gallery.
+- Related travel experiences.
+
+### 6.9 Holiday packages page
+
+[Luxury Holiday And Travel Website Design by Harsh Jain on Dribbble](https://images.openai.com/static-rsc-4/KwtWnWuIhT-FhcPCxzvpaazhPi2zfWXK6vPOeCvwBd87pKpxo3RNlqQF1J6BSg7STW2NZMXQqaa0j0c9xpYol8LLSEK7gTYLWCfxiky3I11U6mIlMQfYoQSuoD4cTTQPGt6SeenzPcudMEx8LzPm3FIB0dwNTy9ksFcASpbOIKM?purpose=inline)
+
+[dribbble.com](https://dribbble.com/shots/23596505-Luxury-Holiday-And-Travel-Website-Design?utm_source=chatgpt.com)
+
+This section is different from membership plans.
+
+Membership plans provide longer-term holiday privileges, while holiday packages are individual travel products.
+
+Package categories:
+
+- Domestic packages.
+- International packages.
+- Family holiday packages.
+- Honeymoon packages.
+- Couple packages.
+- Group tours.
+- Adventure holidays.
+- Luxury holidays.
+- Weekend getaways.
+- Corporate trips.
+- Customized packages.
+- Cruise holidays.
+- Pilgrimage packages.
+- Senior citizen holidays.
+
+Package details:
+
+- Package title.
+- Destination.
+- Duration.
+- Starting price.
+- Number of travellers.
+- Hotel details.
+- Travel inclusions.
+- Travel exclusions.
+- Day-wise itinerary.
+- Transfers.
+- Sightseeing.
+- Meals.
+- Available dates.
+- Cancellation policy.
+- Enquire Now.
+- Book Package.
+
+### 6.10 Customized holiday enquiry page
+
+Customers should be able to request a personalized holiday.
+
+Fields:
+
+- Full name.
+- Mobile number.
+- Email address.
+- Departure city.
+- Destination.
+- Travel date.
+- Return date.
+- Number of adults.
+- Number of children.
+- Number of rooms.
+- Preferred hotel category.
+- Budget range.
+- Holiday type.
+- Special requirements.
+
+Upon submission:
+
+- Generate an enquiry ID.
+- Save the enquiry in CRM.
+- Assign the enquiry to the travel sales team.
+- Send customer confirmation.
+- Notify the assigned sales executive.
+
+### 6.11 Offers and promotions page
+
+- Current membership offers.
+- Limited-time membership discounts.
+- Seasonal holiday offers.
+- Resort-specific offers.
+- Early booking offers.
+- Festival holiday offers.
+- Referral offers.
+- Special corporate offers.
+- Promo code campaigns.
+
+### 6.12 Member login page
+
+- Mobile number/email login.
+- Password login.
+- OTP authentication.
+- Forgot password.
+- Account verification.
+- Secure member access.
+- Membership ID login/lookup.
+
+# 7. Holiday membership business model – Core product functionality
+
+This is the most important part of the entire platform.
+
+myholidayNow should have a configurable membership engine that manages the customer's entire membership lifecycle.
+
+The membership model should be designed independently of the marketing website.
+
+## 7.1 Membership plan configuration
+
+Admin should be able to create unlimited membership plans.
+
+Each plan should have the following configuration:
+
+| Parameter           | Description                                |
+| ------------------- | ------------------------------------------ |
+| Plan name           | Escape Select, Escape Elite, etc.          |
+| Membership type     | Domestic / International / Combined        |
+| Membership duration | 3 / 5 / custom years                       |
+| Membership price    | Total membership price                     |
+| Down payment        | Initial payment                            |
+| EMI option          | Installment configuration                  |
+| Annual entitlement  | Nights or other approved holiday units     |
+| Room category       | Standard / Deluxe / Premium / Suite        |
+| Occupancy           | Adults and children                        |
+| Resort access       | Eligible resort list                       |
+| Booking window      | Minimum and maximum advance booking period |
+| Season access       | Applicable travel seasons                  |
+| Blackout dates      | Restricted booking dates                   |
+| Guest privileges    | Rules for gifting/guest bookings           |
+| Renewal             | Renewal eligibility                        |
+| Transferability     | Membership transfer rules                  |
+| Cancellation        | Cancellation rules                         |
+| Additional fees     | Applicable booking or service charges      |
+
+All values should be configurable, not hardcoded.
+
+## 7.2 Membership entitlement management
+
+Each member should have a digital holiday entitlement account.
+
+Example of a proposed system:
+
+Member holiday account – Sample
+
+Membership
+
+Explore Elite
+
+Active
+
+# 7
+
+Illustrative annual nights
+
+# 5
+
+Membership years
+
+# 5
+
+Illustrative remaining nights
+
+# 2
+
+Nights used this year
+
+Illustrative data only. Actual entitlements must be configured against the approved membership contract.
+
+Features:
+
+- Total membership entitlement.
+- Annual entitlement allocation.
+- Used holiday nights.
+- Remaining holiday nights.
+- Future-year entitlements.
+- Booking deduction.
+- Booking cancellation restoration rules.
+- Expiry date.
+- Entitlement history.
+- Membership extension.
+- Membership renewal.
+- Entitlement adjustment by admin.
+- Entitlement ledger.
+- Audit history.
+
+## 7.3 Membership flexibility features
+
+Taking inspiration from vacation ownership models, myholidayNow could support the following configurable privileges:
+
+| Feature             | Description                                          |
+| ------------------- | ---------------------------------------------------- |
+| Split holidays      | Divide annual nights into multiple stays             |
+| Advance booking     | Use future entitlement, subject to rules             |
+| Carry forward       | Carry unused nights to another year, if plan permits |
+| Gift holidays       | Allow authorized guests to use membership            |
+| Guest booking       | Book for family and friends                          |
+| Upgrade room        | Pay the applicable upgrade difference                |
+| Resort exchange     | Exchange eligible entitlement for another resort     |
+| Membership upgrade  | Upgrade from one plan to another                     |
+| Membership transfer | Transfer membership subject to policy                |
+| Holiday extension   | Add paid nights to an existing booking               |
+
+Important: These are proposed commercial options, not automatically included benefits. Every privilege must be explicitly enabled in the relevant membership contract.
+
+## 7.4 Annual maintenance and additional charges
+
+The system should support different charging models, including:
+
+- Annual maintenance fee.
+- Annual subscription fee.
+- Booking fee.
+- Resort-specific charges.
+- Guest charges.
+- Extra-person charges.
+- Room upgrade charges.
+- Peak-season surcharges.
+- Additional-night charges.
+- Taxes.
+- Cancellation charges.
+- Exchange fees.
+
+Admin should be able to decide whether each charge is included, optional, conditional or mandatory.
+
+## 7.5 Membership payment plans
+
+- Full payment.
+- Down payment.
+- Monthly EMI.
+- Quarterly installment.
+- Half-yearly installment.
+- Custom payment schedules.
+- Payment reminders.
+- Pending installment tracking.
+- Overdue payment tracking.
+- Payment receipts.
+- Refund processing.
+- Payment reconciliation.
+- Membership activation rules.
+
+## 7.6 Membership status
+
+The platform should support these statuses:
+
+- Enquiry.
+- Application submitted.
+- Documents pending.
+- Payment pending.
+- Under verification.
+- Approved.
+- Active.
+- Temporarily suspended.
+- Expired.
+- Renewed.
+- Upgraded.
+- Cancelled.
+- Transferred.
+
+# 8. Member portal – Complete functionality
+
+The member portal is the second-largest component after the public website.
+
+It should provide an experience where customers can manage their complete holiday membership without depending entirely on phone calls or WhatsApp.
+
+[Online Benefits Summary — Club Wyndham](https://images.openai.com/static-rsc-4/maaUeyI63brHGtp_4NMeqqv7M3_dgl3Uyf5_F4qL4rb35Gs6XISY2f0EIBqzGrqUOxUxW0ob5t_8DKpyoMf-Dq41Gz6W8Uu8povrdh9_asUcEqsfsoGT2m1V-hjE61QM7NveIHg_NaPxjTnVD49cjjdz9xNMQq5l8R5toIN8PrI?purpose=inline)
+
+[clubwyndham.wyndhamdestinations.com](https://clubwyndham.wyndhamdestinations.com/us/en/resorts/resort-news/new-feature-coming-soon?utm_source=chatgpt.com)
+
+## 8.1 Member dashboard
+
+After login, the customer should see:
+
+- Welcome message.
+- Member name.
+- Membership ID.
+- Membership plan.
+- Membership status.
+- Membership start date.
+- Membership expiry date.
+- Annual holiday entitlement.
+- Used nights.
+- Available nights.
+- Upcoming reservations.
+- Past holidays.
+- Pending booking requests.
+- Pending payments.
+- Membership benefits.
+- Special member offers.
+- Upcoming expiry reminders.
+- Customer support.
+
+## 8.2 Membership details
+
+- View membership plan.
+- View membership agreement.
+- View membership benefits.
+- View membership duration.
+- View holiday entitlements.
+- View room category.
+- View eligible resorts.
+- View membership terms.
+- View payment history.
+- View outstanding installments.
+- Download membership card.
+- Download membership documents.
+- Request membership upgrade.
+- Request membership transfer.
+- Request renewal.
+
+## 8.3 Online holiday booking
+
+[softwareadvice.ie](https://www.softwareadvice.ie/software/3094/resnexus?utm_source=chatgpt.com)
+
+This should be a complete reservation request system.
+
+Booking flow:
+
+1. Select destination
+
+   Choose a destination, city, country or resort.
+2. Select resort
+
+   View eligible resorts and room categories.
+3. Select travel dates
+
+   Choose check-in and check-out dates.
+4. Select guests
+
+   Enter adults, children and room requirements.
+5. Check membership eligibility
+
+   Verify the customer's membership, entitlements and booking rules.
+6. Check resort availability
+
+   Check inventory or submit a request for manual availability confirmation.
+7. Review booking
+
+   Show entitlement deduction and applicable charges.
+8. Confirm booking request
+
+   Submit the reservation and generate a booking reference.
+9. Reservation confirmation
+
+   Reservation team confirms the resort and sends the final voucher.
+
+### Booking features
+
+- Resort search.
+- Destination search.
+- Date selection.
+- Guest selection.
+- Room selection.
+- Membership eligibility validation.
+- Resort availability.
+- Alternative resort suggestions.
+- Alternative date suggestions.
+- Member entitlement calculation.
+- Additional charges calculation.
+- Booking request submission.
+- Booking reference generation.
+- Booking status.
+- Booking modification.
+- Booking cancellation.
+- Reservation confirmation.
+- Booking voucher download.
+- Email confirmation.
+- WhatsApp confirmation.
+
+### Booking status
+
+| Status               | Description                            |
+| -------------------- | -------------------------------------- |
+| Draft                | Booking not submitted                  |
+| Requested            | Customer has submitted request         |
+| Under review         | Reservation team checking availability |
+| Availability pending | Resort confirmation awaited            |
+| Confirmed            | Resort reservation confirmed           |
+| Payment pending      | Additional payment required            |
+| Cancelled            | Booking cancelled                      |
+| Rejected             | Request could not be fulfilled         |
+| Completed            | Holiday successfully completed         |
+| No-show              | Customer did not arrive                |
+
+Important booking rule: Do not show a room as confirmed merely because the customer submitted a request. Confirmation must be based on live resort inventory or an authorized reservation team's confirmation.
+
+## 8.4 Booking history
+
+- Upcoming bookings.
+- Completed holidays.
+- Cancelled bookings.
+- Pending requests.
+- Booking date.
+- Resort details.
+- Check-in date.
+- Check-out date.
+- Room category.
+- Guest information.
+- Booking amount.
+- Entitlement deducted.
+- Booking voucher.
+- Invoice and receipt.
+- Cancellation details.
+
+## 8.5 Guest and family management
+
+- Add family members.
+- Save guest details.
+- Primary member information.
+- Relationship information.
+- Guest document upload.
+- Guest booking authorization.
+- Family holiday history.
+- Authorized traveller management.
+
+## 8.6 Member communication
+
+- Contact customer support.
+- Submit support ticket.
+- Request callback.
+- WhatsApp support.
+- Email support.
+- Booking assistance.
+- Membership-related queries.
+- Payment queries.
+- Complaints.
+- Feedback.
+- Ticket history.
+
+## 8.7 Member offers
+
+- Exclusive resort offers.
+- Special holiday deals.
+- Additional paid nights.
+- Room upgrades.
+- Destination promotions.
+- Referral offers.
+- Seasonal discounts.
+- Member-only experiences.
+
+# 9. Holiday booking and resort inventory management
+
+This module will be used by the internal reservation team.
+
+The business should have a central system to maintain resort details, partner information, room categories and booking availability.
+
+## 9.1 Resort management
+
+- Add resort.
+- Edit resort.
+- Delete/deactivate resort.
+- Resort name.
+- Resort description.
+- Resort address.
+- Country.
+- State.
+- City.
+- GPS coordinates.
+- Resort images.
+- Resort videos.
+- Resort contact information.
+- Resort category.
+- Star rating.
+- Amenities.
+- Room types.
+- Check-in/check-out timings.
+- Partner details.
+- Contract information.
+- Membership eligibility.
+- Resort status.
+
+## 9.2 Room management
+
+- Room category creation.
+- Room description.
+- Maximum occupancy.
+- Adult capacity.
+- Child capacity.
+- Extra-bed availability.
+- Room images.
+- Meal plan.
+- Room amenities.
+- Member room eligibility.
+- Room upgrade charges.
+- Additional guest charges.
+
+## 9.3 Resort availability
+
+- Daily inventory.
+- Room-wise inventory.
+- Seasonal inventory.
+- Peak-season dates.
+- Blackout dates.
+- Resort maintenance dates.
+- Blocked inventory.
+- Available rooms.
+- Reserved rooms.
+- Confirmed bookings.
+- Cancelled inventory.
+- Inventory update history.
+
+## 9.4 Resort partner management
+
+- Partner registration.
+- Resort ownership details.
+- Partner contact information.
+- Contract management.
+- Agreed room rates.
+- Member room rates.
+- Non-member room rates.
+- Seasonal pricing.
+- Payment terms.
+- Commission structure.
+- Settlement tracking.
+- Partner invoices.
+- Partner performance.
+
+## 9.5 Reservation team dashboard
+
+- New booking requests.
+- Pending confirmations.
+- Confirmed reservations.
+- Failed reservations.
+- Cancellation requests.
+- Resort-wise bookings.
+- Upcoming check-ins.
+- Upcoming check-outs.
+- Guest details.
+- Resort contact details.
+- Alternative resort allocation.
+- Manual booking entry.
+- Booking assignment.
+- Booking notes.
+- Booking voucher generation.
+
+## 9.6 Inventory and reservation controls
+
+The platform should support two booking methods:
+
+Method A – Integrated inventory
+
+If resort partners provide API access, the system checks availability and rates in real time.
+
+Method B – Manual confirmation
+
+If partners do not provide APIs, the member submits a request, and the reservation executive contacts the resort and confirms availability manually.
+
+The system must clearly distinguish between requested, available, reserved and confirmed inventory.
+
+# 10. Sales CRM and membership sales management
+
+This is a critical requirement because holiday membership businesses depend on enquiries, consultations, follow-ups and membership conversions.
+
+[Intrix - a CRM system built to support business expansion](https://images.openai.com/static-rsc-4/JQ2H4P1nKn6t1b5GGuuWAjk35CyI1KZVe-Sr1CvCEH80LIEql-WTrKATr1URf4kdCMhclQQjSsw2mpuXNSwIq30gg2y0cvm1kt0b39h99C6LALyADGfMKYOcGg5IkEEmVYeh82cZVeEb_L-Cv66ayYd_fL6F6I_nmxFhzICAdd0?purpose=inline)
+
+[holosys.eu](https://www.holosys.eu/news/intrix-crm-system-built-support-business-expansion/?utm_source=chatgpt.com)
+
+## 10.1 Lead generation
+
+Leads should come from:
+
+- Website enquiry forms.
+- Membership enquiry forms.
+- Resort enquiry forms.
+- Holiday package enquiry forms.
+- WhatsApp.
+- Phone calls.
+- Facebook campaigns.
+- Instagram campaigns.
+- Google Ads.
+- Referral programs.
+- Corporate partnerships.
+- Offline sales events.
+- Manual lead creation.
+
+## 10.2 Lead management
+
+- Create new leads.
+- Edit lead details.
+- Delete/archive leads.
+- Lead name.
+- Phone number.
+- Email.
+- City.
+- Interested membership.
+- Preferred destination.
+- Budget range.
+- Lead source.
+- Lead creation date.
+- Assigned salesperson.
+- Lead priority.
+- Lead status.
+- Follow-up date.
+- Notes.
+- Call history.
+- WhatsApp conversation history.
+- Email history.
+
+## 10.3 Lead pipeline
+
+Recommended sales stages:
+
+1. New enquiry.
+2. Contact attempted.
+3. Connected.
+4. Interested.
+5. Consultation scheduled.
+6. Membership presentation completed.
+7. Proposal shared.
+8. Negotiation.
+9. Payment initiated.
+10. Membership sold.
+11. Lost lead.
+12. Future follow-up.
+
+## 10.4 Sales executive dashboard
+
+- Assigned leads.
+- New leads.
+- Pending calls.
+- Today's follow-ups.
+- Overdue follow-ups.
+- Interested customers.
+- Membership proposals.
+- Converted customers.
+- Lost leads.
+- Sales target.
+- Sales achieved.
+- Commission earned.
+
+## 10.5 Sales automation
+
+- Automatic lead assignment.
+- Lead assignment by location.
+- Lead assignment by campaign.
+- Follow-up reminders.
+- Missed follow-up alerts.
+- Automatic welcome messages.
+- WhatsApp templates.
+- Email templates.
+- Lead status automation.
+- Sales manager notifications.
+- Duplicate lead detection.
+- Lead conversion tracking.
+
+## 10.6 Membership sales workflow
+
+1. Customer submits membership enquiry.
+2. Lead automatically enters CRM.
+3. Lead assigned to sales executive.
+4. Sales team contacts customer.
+5. Membership plan recommended.
+6. Quotation and proposal shared.
+7. Customer selects membership.
+8. Payment or installment collected.
+9. Membership agreement generated.
+10. Admin verifies and activates membership.
+11. Customer receives member login credentials.
+
+# 11. Payment, finance and invoicing
+
+The platform should support both membership sales and regular holiday package sales.
+
+### A. Membership payments
+
+- Full payment.
+- Down payment.
+- EMI payments.
+- Installment schedule.
+- Outstanding balance.
+- Late payment charges, if applicable.
+- Payment reminders.
+- Payment history.
+- Refunds.
+- Membership activation payment conditions.
+
+### B. Holiday booking payments
+
+- Additional room charges.
+- Extra guest charges.
+- Resort upgrade charges.
+- Additional-night payments.
+- Booking fees.
+- Package payments.
+- Advance payments.
+- Balance payments.
+- Cancellation charges.
+- Refunds.
+
+### C. Finance dashboard
+
+- Total membership sales.
+- Total booking revenue.
+- Total collections.
+- Pending collections.
+- Outstanding installments.
+- Refunds.
+- Taxes.
+- Resort partner payments.
+- Commission.
+- Monthly revenue.
+- Yearly revenue.
+- Payment reconciliation.
+
+### D. Invoice and documents
+
+- Membership invoice.
+- Payment receipt.
+- Tax invoice.
+- Holiday booking voucher.
+- Cancellation receipt.
+- Refund receipt.
+- Membership agreement.
+- Customer payment statement.
+
+### E. Payment gateway integrations
+
+Potential integrations:
+
+- Razorpay.
+- Cashfree.
+- PayU.
+- UPI.
+- Credit/debit cards.
+- Net banking.
+- EMI financing provider, if approved.
+
+# 12. Referral, rewards and loyalty program
+
+A loyalty program can help myholidayNow increase repeat bookings and acquire new members.
+
+### Features
+
+- Member referral ID.
+- Referral links.
+- Referral registration.
+- Referral tracking.
+- Referral status.
+- Referral rewards.
+- Membership referral discounts.
+- Loyalty points.
+- Reward redemption.
+- Birthday offers.
+- Anniversary offers.
+- Holiday milestones.
+- Exclusive member promotions.
+- Member recognition levels.
+
+### Proposed member levels
+
+| Level    | Suggested concept                                   |
+| -------- | --------------------------------------------------- |
+| Silver   | Standard membership privileges                      |
+| Gold     | Additional member benefits                          |
+| Platinum | Premium benefits and priority support               |
+| Diamond  | Highest-level privileges and personalized concierge |
+
+These levels are optional loyalty classifications and should not conflict with the contractual membership plans.
+
+# 13. Customer support and communication system
+
+### Communication channels
+
+- WhatsApp Business API.
+- Email.
+- SMS.
+- Mobile push notifications.
+- Website contact forms.
+- Phone support.
+
+### Automated notifications
+
+| Event                | Notification                 |
+| -------------------- | ---------------------------- |
+| New registration     | Welcome message              |
+| Membership purchased | Payment confirmation         |
+| Membership activated | Activation confirmation      |
+| Payment pending      | Payment reminder             |
+| Booking requested    | Booking request confirmation |
+| Booking confirmed    | Reservation confirmation     |
+| Booking cancelled    | Cancellation update          |
+| Upcoming holiday     | Pre-arrival reminder         |
+| Membership expiry    | Expiry reminder              |
+| Birthday             | Birthday wishes              |
+| Anniversary          | Anniversary wishes           |
+| Support ticket       | Ticket confirmation          |
+
+### Customer support ticket system
+
+- Create ticket.
+- Ticket category.
+- Ticket priority.
+- Assign support executive.
+- Add notes.
+- Upload documents.
+- Ticket status.
+- Customer replies.
+- Internal comments.
+- Ticket resolution.
+- Customer feedback.
+
+# 14. Admin panel – Complete system management
+
+[White Label Travel Portal | Rayds](https://images.openai.com/static-rsc-4/rud-9to5AJPyFX_9iy62wx7ngTBxBPzBMwwMhpGjwk4MI1IgUhUtjT95WfDDU2FPUIkyoLhVrN2QVHM-bEYVKEVkx5oJk0TK40FNbYDmbAQL2xK8nEOZyprWl7eUp7JzrVW941NFo7d6WfYOYY8ETDEuRywSbva9ohNFcyTr4LI?purpose=inline)
+
+[rayds.com](https://www.rayds.com/white-label-travel-portal?utm_source=chatgpt.com)
+
+The admin panel should be the central control system for the entire business.
+
+## 14.1 Main admin dashboard
+
+Display:
+
+- Total registered customers.
+- Total active members.
+- Total inactive members.
+- Total membership sales.
+- New membership enquiries.
+- Membership conversion rate.
+- Total resorts.
+- Total destinations.
+- Total holiday packages.
+- Total bookings.
+- Pending booking requests.
+- Confirmed bookings.
+- Cancelled bookings.
+- Total revenue.
+- Pending payments.
+- Upcoming check-ins.
+- Upcoming check-outs.
+- Resort partner performance.
+- Sales executive performance.
+
+## 14.2 User management
+
+- Create users.
+- Edit users.
+- Delete/deactivate users.
+- User profiles.
+- User roles.
+- User permissions.
+- Login history.
+- Password reset.
+- Account verification.
+- Account suspension.
+- Activity logs.
+
+## 14.3 Role-based access control
+
+| Role                  | Access                              |
+| --------------------- | ----------------------------------- |
+| Super Admin           | Complete system access              |
+| Business Admin        | Business operations and reporting   |
+| Sales Manager         | Leads and sales teams               |
+| Sales Executive       | Assigned leads and follow-ups       |
+| Membership Manager    | Memberships and entitlements        |
+| Reservation Manager   | Resort booking operations           |
+| Reservation Executive | Assigned booking requests           |
+| Finance Manager       | Payments, invoices and reports      |
+| Resort Manager        | Resort and inventory information    |
+| Customer Support      | Tickets and customer communication  |
+| Marketing Manager     | Campaigns and website promotions    |
+| Content Manager       | Pages, blogs, banners and galleries |
+
+## 14.4 Membership administration
+
+- Membership plan creation.
+- Plan editing.
+- Plan activation/deactivation.
+- Membership pricing.
+- Membership discounts.
+- Membership application approval.
+- Membership ID generation.
+- Membership agreement generation.
+- Membership activation.
+- Entitlement allocation.
+- Entitlement adjustment.
+- Membership suspension.
+- Membership renewal.
+- Membership upgrade.
+- Membership transfer.
+- Membership cancellation.
+- Membership expiry management.
+
+## 14.5 Website content management system
+
+Admin should be able to update the public website without developer assistance.
+
+- Homepage banners.
+- Homepage content.
+- About Us content.
+- Membership pages.
+- Membership benefits.
+- Resort listings.
+- Resort images.
+- Destination pages.
+- Holiday packages.
+- Travel blogs.
+- Testimonials.
+- Customer reviews.
+- FAQs.
+- Partner logos.
+- Offers and promotions.
+- Footer information.
+- SEO metadata.
+
+## 14.6 Marketing and campaign management
+
+- Enquiry campaign management.
+- Membership promotional campaigns.
+- Discount campaigns.
+- Email marketing.
+- WhatsApp campaigns.
+- SMS campaigns.
+- Referral campaigns.
+- Landing page creation.
+- Campaign tracking.
+- Conversion reports.
+- Coupon management.
+
+## 14.7 Reporting and analytics
+
+- Membership sales report.
+- Membership plan performance.
+- Customer acquisition report.
+- Lead conversion report.
+- Sales executive report.
+- Resort booking report.
+- Destination-wise booking report.
+- Revenue report.
+- Outstanding payment report.
+- Cancellation report.
+- Refund report.
+- Member usage report.
+- Entitlement utilization report.
+- Resort occupancy report.
+- Customer retention report.
+- Referral report.
+
+## 14.8 System configuration
+
+- Company details.
+- Website settings.
+- Currency settings.
+- Tax configuration.
+- Payment gateway configuration.
+- Email configuration.
+- SMS configuration.
+- WhatsApp configuration.
+- Booking rules.
+- Membership rules.
+- Cancellation rules.
+- Notification templates.
+- API credentials.
+- Security settings.
+- Backup configuration.
+- Audit logs.
+
+# 15. Mobile application – Future phase
+
+My recommendation is to first build a responsive website and member portal. Once the membership and booking workflows are stable, develop dedicated Android and iOS applications.
+
+[Redesign membership club app by Luciana Vitória](https://images.openai.com/static-rsc-4/IeGxL94gkupTWQz0NKra09TjR8BEQuzo4BDGs-6IZ-zWeQ6cwNREoMo4cOylZYuOfhILX1a2do-D1mOuSs7-Gw-EOYWNvW8ur2O18Q3M0CSeAO7qs0OUuhMGmqoAVrHJWMJjdeL_ZnRgwYJE4ZT6m_3k06q5gcZCFqySp4Lz3aI?purpose=inline)
+
+[contra.com](https://contra.com/p/lLbmZmYc-redesign-membership-club-app?utm_source=chatgpt.com)
+
+### Customer mobile application
+
+- Mobile registration and login.
+- OTP authentication.
+- Member dashboard.
+- Membership card.
+- Membership details.
+- Holiday entitlement balance.
+- Resort discovery.
+- Destination discovery.
+- Resort search.
+- Holiday package browsing.
+- Online booking requests.
+- Booking status tracking.
+- Booking history.
+- Booking voucher.
+- Payment history.
+- Online payment.
+- Family member management.
+- Holiday offers.
+- Referral program.
+- Push notifications.
+- Customer support.
+- WhatsApp integration.
+- Profile management.
+
+### Admin/operations mobile application (optional)
+
+- Sales lead access.
+- Follow-up management.
+- Booking request notifications.
+- Reservation status updates.
+- Customer information.
+- Task management.
+- Sales performance.
+- Field team reporting.
+
+# 16. Advanced features and competitive differentiators
+
+These features can make myholidayNow stand out from traditional holiday membership websites.
+
+### A. AI Holiday Planner
+
+- AI destination recommendations.
+- AI-based holiday suggestions.
+- Budget-based travel planning.
+- Family-based destination recommendations.
+- Weather-aware travel suggestions.
+- Holiday itinerary generation.
+- Suggested resorts.
+- Activity recommendations.
+- Personalized travel plans.
+
+### B. AI Membership Assistant
+
+- Explain membership benefits.
+- Answer membership-related questions.
+- Explain entitlement balances.
+- Help customers understand booking rules.
+- Recommend membership plans.
+- Explain additional charges.
+- Answer resort-related questions.
+- Guide customers through bookings.
+
+### C. Smart Resort Recommendation
+
+- Recommend resorts based on membership eligibility.
+- Recommend resorts based on destination.
+- Recommend family-friendly properties.
+- Recommend resorts based on budget.
+- Recommend resorts based on amenities.
+- Recommend alternative resorts when requested properties are unavailable.
+
+### D. Digital Membership Card
+
+- Unique membership number.
+- QR code.
+- Member name.
+- Membership plan.
+- Membership validity.
+- Primary member information.
+- Authorized family members.
+- Membership verification.
+
+### E. Smart Booking Management
+
+- Automatic entitlement calculation.
+- Booking eligibility validation.
+- Availability notifications.
+- Alternative dates.
+- Alternative resorts.
+- Automated reservation reminders.
+- Booking modification workflows.
+- Booking history.
+- Digital vouchers.
+
+### F. Membership Wallet
+
+A centralized wallet for:
+
+- Holiday entitlement balance.
+- Loyalty points.
+- Referral rewards.
+- Promotional vouchers.
+- Discount coupons.
+- Additional paid holiday credits, if offered.
+
+# 17. Third-party API and integration requirements
+
+| Sr. No. | Integration                    | Purpose                              | Priority |
+| ------- | ------------------------------ | ------------------------------------ | -------- |
+| 1       | Razorpay                       | Membership and holiday payments      | High     |
+| 2       | WhatsApp Business API          | Enquiries, booking and notifications | High     |
+| 3       | Gmail / SMTP                   | Transactional emails                 | High     |
+| 4       | SMS gateway                    | OTP and alerts                       | High     |
+| 5       | Firebase                       | Push notifications                   | Medium   |
+| 6       | Google Maps                    | Resort location and maps             | High     |
+| 7       | Google Analytics 4             | Website analytics                    | High     |
+| 8       | Google Tag Manager             | Marketing tracking                   | High     |
+| 9       | Meta Pixel                     | Facebook/Instagram advertising       | High     |
+| 10      | Google Ads conversion tracking | Lead and membership conversions      | High     |
+| 11      | Google reCAPTCHA / equivalent  | Spam protection                      | High     |
+| 12      | Resort inventory APIs          | Live availability                    | Medium   |
+| 13      | Hotel booking APIs             | Hotel search and booking             | Optional |
+| 14      | Flight APIs                    | Flight booking                       | Optional |
+| 15      | Currency conversion API        | International pricing                | Optional |
+| 16      | CRM integrations               | Lead synchronization                 | Optional |
+| 17      | E-signature service            | Digital membership agreements        | Medium   |
+| 18      | Cloud storage                  | Images and documents                 | High     |
+| 19      | AI API                         | AI travel planner and chatbot        | Medium   |
+
+Integration strategy: Do not make live hotel or flight booking a mandatory dependency for the initial launch. The membership booking workflow must work even when resorts confirm inventory manually.
+
+# 18. Database and core backend entities
+
+The development team should design the backend around these core entities.
+
+| Sr. No. | Database Entity     | Purpose                    |
+| ------- | ------------------- | -------------------------- |
+| 1       | Users               | User authentication        |
+| 2       | Roles               | User roles                 |
+| 3       | Permissions         | Role-based access          |
+| 4       | Customers           | Customer profiles          |
+| 5       | Leads               | Sales enquiries            |
+| 6       | Sales Activities    | Calls and follow-ups       |
+| 7       | Membership Plans    | Membership configuration   |
+| 8       | Memberships         | Customer memberships       |
+| 9       | Membership Payments | Installments and payments  |
+| 10      | Entitlement Ledger  | Holiday nights and credits |
+| 11      | Resorts             | Resort information         |
+| 12      | Resort Partners     | Partner details            |
+| 13      | Room Categories     | Room configurations        |
+| 14      | Resort Inventory    | Room availability          |
+| 15      | Destinations        | Destination information    |
+| 16      | Holiday Packages    | Package information        |
+| 17      | Package Itineraries | Day-wise travel plans      |
+| 18      | Bookings            | Customer reservations      |
+| 19      | Booking Guests      | Guest details              |
+| 20      | Booking Payments    | Reservation payments       |
+| 21      | Booking Vouchers    | Reservation documents      |
+| 22      | Coupons             | Discount codes             |
+| 23      | Referrals           | Referral tracking          |
+| 24      | Rewards             | Loyalty points             |
+| 25      | Support Tickets     | Customer complaints        |
+| 26      | Notifications       | Customer communications    |
+| 27      | Reviews             | Resort reviews             |
+| 28      | CMS Pages           | Website content            |
+| 29      | Media Library       | Images and videos          |
+| 30      | Audit Logs          | Activity tracking          |
+
+### Important technical rule
+
+Holiday entitlements must use a transaction-based ledger rather than only storing a remaining-night number.
+
+For example:
+
+- Annual allocation: +7 nights.
+- Booking confirmation: -3 nights.
+- Eligible cancellation: +3 nights.
+- Admin adjustment: +1 night.
+
+This will preserve the history of every entitlement transaction and help prevent incorrect balances.
+
+# 19. Non-functional requirements
+
+| Category             | Requirement                                    |
+| -------------------- | ---------------------------------------------- |
+| Performance          | Fast page loading and optimized images         |
+| Responsive design    | Desktop, tablet and mobile                     |
+| Security             | HTTPS and secure authentication                |
+| Access control       | Role-based permissions                         |
+| Data privacy         | Customer data protection                       |
+| Payments             | Secure payment gateway integration             |
+| Scalability          | Support growing memberships and bookings       |
+| SEO                  | SEO-friendly page URLs and metadata            |
+| Availability         | Reliable hosting and monitoring                |
+| Backup               | Automated database backups                     |
+| Logging              | Error and activity logging                     |
+| Audit                | Track critical administrative actions          |
+| Accessibility        | Keyboard navigation and readable contrast      |
+| Internationalization | Prepared for multiple currencies and languages |
+| Maintainability      | Modular backend and reusable components        |
+
+### Recommended technical architecture
+
+| Layer            | Recommended technology                     |
+| ---------------- | ------------------------------------------ |
+| Website frontend | Next.js / React                            |
+| Member portal    | Next.js / React                            |
+| Admin panel      | React / Next.js                            |
+| Backend          | Node.js / NestJS                           |
+| Database         | PostgreSQL                                 |
+| Cache            | Redis                                      |
+| File storage     | AWS S3 or compatible storage               |
+| Authentication   | Secure session or JWT-based authentication |
+| Payments         | Razorpay / Cashfree                        |
+| Messaging        | WhatsApp Business API                      |
+| Email            | SMTP / transactional email provider        |
+| Hosting          | AWS / Azure / equivalent cloud             |
+| Analytics        | GA4 and internal dashboards                |
+
+The architecture should use modular services for membership, booking, CRM, payments and resort inventory, without requiring microservices from the first release.
+
+# 20. Development phases and implementation roadmap
+
+I recommend developing this project in six phases so that the business can start generating membership enquiries and sales before every advanced feature is completed.
+
+## Development roadmap
+
+1. Phase 1 – Website and branding
+
+   Priority 1
+
+   Public website and lead generation
+   - Homepage and company pages
+   - Membership listing and comparison
+   - Resort and destination catalogue
+   - Holiday package pages
+   - Enquiry forms
+   - Contact and WhatsApp integration
+   - CMS and SEO
+2. Phase 2 – Admin and CRM
+
+   Priority 1
+
+   Internal business management
+   - Admin dashboard
+   - Customer management
+   - Lead management
+   - Sales pipeline
+   - Follow-up management
+   - Membership plan configuration
+   - Sales reports
+3. Phase 3 – Membership engine
+
+   Priority 1
+
+   Core membership business
+   - Membership creation
+   - Membership activation
+   - Membership agreements
+   - Payment schedules
+   - Entitlement management
+   - Membership cards
+   - Member login
+   - Member dashboard
+4. Phase 4 – Resort booking system
+
+   Priority 2
+
+   Holiday reservations and operations
+   - Resort inventory
+   - Room management
+   - Booking requests
+   - Availability checking
+   - Reservation management
+   - Booking vouchers
+   - Cancellation and modification
+   - Booking payments
+5. Phase 5 – Customer experience
+
+   Priority 2
+
+   Engagement and retention
+   - WhatsApp automation
+   - Email and SMS notifications
+   - Referral program
+   - Loyalty points
+   - Customer support tickets
+   - Holiday recommendations
+   - Member offers
+6. Phase 6 – Advanced platform
+
+   Priority 3
+
+   Mobile and intelligent travel experience
+   - Android application
+   - iOS application
+   - AI holiday planner
+   - AI membership assistant
+   - Hotel inventory APIs
+   - Flight booking APIs
+   - Advanced analytics
+   - Automated resort integrations
+
+## 21. MVP – Minimum Viable Product
+
+If the objective is to launch myholidayNow quickly, these are the functionalities I would consider mandatory for the first release.
+
+| Module           | MVP features                                   |
+| ---------------- | ---------------------------------------------- |
+| Website          | Homepage, About, Contact, Membership, Resorts  |
+| Membership       | Four membership plans and comparison           |
+| Resorts          | Resort catalogue and detail pages              |
+| Holiday packages | Package listings and enquiry                   |
+| Lead management  | Enquiry capture and assignment                 |
+| CRM              | Follow-ups and lead pipeline                   |
+| Admin            | Dashboard and content management               |
+| Membership sales | Customer registration and membership creation  |
+| Payment          | Membership payment and receipts                |
+| Member portal    | Login, profile, membership details             |
+| Entitlement      | Annual holiday balance                         |
+| Booking          | Resort booking request and manual confirmation |
+| Notification     | Email and WhatsApp notifications               |
+| Reporting        | Sales, membership and booking reports          |
+
+The MVP should support the complete business cycle:
+
+Visitor → Enquiry → Sales → Membership Purchase → Activation → Member Login → Holiday Booking → Resort Confirmation → Holiday Experience.
+
+# 22. Business rules that must be finalized before development
+
+This is particularly important because membership platforms involve contractual holiday entitlements and financial commitments.
+
+| Sr. No. | Business rule              | Required decision                             |
+| ------- | -------------------------- | --------------------------------------------- |
+| 1       | Membership tenure          | 3, 5 or other durations                       |
+| 2       | Annual holiday entitlement | Number of nights per year                     |
+| 3       | Room entitlement           | Room category and occupancy                   |
+| 4       | Season eligibility         | All seasons or restricted seasons             |
+| 5       | Booking advance period     | Minimum booking notice                        |
+| 6       | Booking confirmation       | Instant or manual confirmation                |
+| 7       | Carry-forward              | Whether unused nights expire or carry forward |
+| 8       | Holiday splitting          | Whether nights can be split                   |
+| 9       | Advance entitlement        | Whether future-year nights can be used        |
+| 10      | Gift booking               | Whether family/friends can use membership     |
+| 11      | Membership transfer        | Transfer eligibility and fees                 |
+| 12      | Membership upgrade         | Upgrade and price adjustment                  |
+| 13      | Annual maintenance         | Whether an annual maintenance fee applies     |
+| 14      | Additional charges         | Extra guests, meals, taxes, upgrades          |
+| 15      | Cancellation               | Booking and membership cancellation rules     |
+| 16      | Refund                     | Refund eligibility and processing             |
+| 17      | Resort exchange            | Whether partner resort exchange is available  |
+| 18      | International booking      | Currency, taxes and exchange rules            |
+| 19      | Payment plan               | Full payment, EMI and installments            |
+| 20      | Membership renewal         | Renewal conditions                            |
+
+My recommendation: These rules should be maintained in a configurable admin panel, with a versioned membership agreement. A customer's booking eligibility should always be evaluated against the contract and plan rules applicable to their membership.
+
+# 23. UI/UX design direction
+
+The website should feel like a premium international travel brand, rather than a basic hotel booking website.
+
+## Recommended visual style
+
+[Exklusives Angebot Miavana by Time+Tide - Reiseservice Africa](https://images.openai.com/static-rsc-4/i5ET4wUqL8QqrDUEcH7rxzFlBwCj2vstcK0As8aVWL4mnGgFcHJ1pQqHTL1VGvx7A23u196L7BuQ5XAsAn1EogztptTLt2Xwfc43CCdE60ZK7FEisS5hI60PjbOj4hJHE7bW26TvqLL3gh9DcMToO-9LhwrHySl3WPi8EJ1vyb4?purpose=inline)
+
+Premium destination imagery
+
+Large resort and destination photographs.
+
+[One&Only The Palm from $455. Dubai Hotel Deals & Reviews - KAYAK](https://images.openai.com/static-rsc-4/5tG4ZJhISok9tdjl0bRljsnDfQgXH4yWrgK_EF_l0k0SJVwN_6jhD8vFnbf4W3M1pOfvukxnSNO9Q9xIKMh3uh1C2SNF3QwNTIS_wj6UcVWf-uQ2oYvuUhbr1djsM8EYNT4bi2WjH_H9xlCOKZbO63YW6DyZ3nmLyi94dFNkxy8?purpose=inline)
+
+Elegant hospitality design
+
+Premium typography and spacious layouts.
+
+[HoteLux is a membership-based luxury travel agent offering instant booking confirmation. With a rich portfolio of globally acclaimed luxury hotel groups, HoteLux connects discerning travelers to exclusive and invite-only luxury agent programs, redefining the essence of bespoke travel.](https://images.openai.com/static-rsc-4/F2GFPZOOMF4dnMsd8OTKH9L_bei9R8Vej35bz5J-88pzKq8gcG2xiCDwxfXfr5vClsB5HQRZZMUflKc9z5dp_UuJ5-A1x1EShaCjbKwm8vA20GHbPus0WzioUJ_h8NqZQtIBqAH3fb0dWuhX1kFI6GM8NlIg7SD2UZIdQxXM4Us?purpose=inline)
+
+Membership presentation
+
+Beautiful plan cards and clear comparisons.
+
+[Luxeora - Luxury Hotel Website Redesign by Pixxen UI/UX for Pixxen Studio on Dribbble](https://images.openai.com/static-rsc-4/bhqJPSzVgd2PFk8L2M5r4s6dtGObxsbLZWmv1HXSDSuqHKQvb6c6t-66vwC1_gYeRCD78euFQxh02HoCSVyIZ_WzPPvFNfR0PQ34yAAaqrzXQFY6P1C327Lfx5X9qbR4P8RNsuCJQH2UBdboHC6Vma6BioB7iXa4HK-Dbu_kiBI?purpose=inline)
+
+Simple booking experience
+
+Clean forms, calendars and reservation status.
+
+### Suggested brand colours
+
+| Colour                   | Suggested usage      |
+| ------------------------ | -------------------- |
+| Deep Navy `#142B45`      | Primary brand colour |
+| Champagne Gold `#C8A96A` | Premium highlights   |
+| Ivory `#F8F6F0`          | Background           |
+| White `#FFFFFF`          | Cards and sections   |
+| Charcoal `#30343B`       | Text                 |
+| Sage `#829B88`           | Secondary accents    |
+
+### Design principles
+
+- Premium and elegant appearance.
+- Mobile-first responsive design.
+- Large resort photographs.
+- Clear membership pricing and benefits.
+- Easy membership comparison.
+- Prominent enquiry buttons.
+- Simple booking flow.
+- Clear member login.
+- Consistent visual language.
+- No excessive animations.
+- Fast-loading pages.
+
+# 24. Key success metrics (KPIs)
+
+The admin dashboard should help management understand how the business is performing.
+
+| KPI                           | What it measures                                       |
+| ----------------------------- | ------------------------------------------------------ |
+| Website visitors              | Website traffic                                        |
+| Enquiry conversion            | Visitors converting into enquiries                     |
+| Lead response time            | How quickly sales responds                             |
+| Lead-to-membership conversion | Sales effectiveness                                    |
+| Membership revenue            | Total membership sales                                 |
+| Average membership value      | Average membership purchase                            |
+| Active members                | Active membership base                                 |
+| Entitlement utilization       | Holiday usage percentage                               |
+| Booking conversion            | Booking requests converted into confirmed reservations |
+| Resort fulfilment rate        | Successfully fulfilled reservations                    |
+| Cancellation rate             | Cancelled bookings                                     |
+| Repeat booking rate           | Returning holiday members                              |
+| Customer satisfaction         | Customer experience                                    |
+| Referral conversion           | New members from referrals                             |
+
+# 25. Important competitor references and what to study
+
+These are the reference pages I recommend giving your UI/UX designer and development team.
+
+| Website                                                                                     | Pages to study                           | Main inspiration                        |
+| ------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
+| [MyHolidayz](https://www.myholidayz.in/?utm_source=chatgpt.com)                             | Home, membership, resorts, contact       | Existing business identity              |
+| [VentureVibe](https://www.venturevibeglobalhoppers.com/?utm_source=chatgpt.com)             | Home, services, destinations, membership | Global travel positioning               |
+| [Club Mahindra](https://www.clubmahindra.com/?utm_source=chatgpt.com)                       | Resorts, experiences, membership         | Resort discovery and premium membership |
+| [Club Mahindra Membership](https://www.clubmahindra.com/memberships?utm_source=chatgpt.com) | Plans and benefits                       | Membership presentation                 |
+| [Club Nebula](https://clubnebula.com/?utm_source=chatgpt.com)                               | Offerings, membership                    | Vacation ownership model                |
+| [Club Nebula FAQs](https://clubnebula.com/faqs?utm_source=chatgpt.com)                      | Membership FAQ and booking rules         | Membership entitlements and flexibility |
+
+### Specific features worth studying
+
+- Club Mahindra: Its current Keystone offering presents different membership keys, annual holiday entitlements, complimentary breakfast and access to a resort network.&#x20;
+
+  [image](https://www.google.com/s2/favicons?domain=https://www.clubmahindra.com\&sz=32)
+
+  Club Mahindra+1
+
+- Club Nebula: Its FAQ describes 7-night annual entitlements, splitting and gifting stays, advancing entitlements and a revenue-sharing option for eligible long-tenure memberships. These should be studied as business-model examples, not automatically adopted.&#x20;
+
+  [image](https://www.google.com/s2/favicons?domain=https://clubnebula.com\&sz=32)
+
+  clubnebula.com+1
+
+- VentureVibe: Its website describes global holiday membership, hotel access, personalized itineraries, flights, tours and membership benefits.&#x20;
+
+  [image](https://www.google.com/s2/favicons?domain=https://www.venturevibeglobalhoppers.com\&sz=32)
+
+  Exclusive Travel Membership
+
+
+
+# 26. Final deliverables expected from the development team
+
+The final development scope should include:
+
+| Sr. No. | Deliverable         | Description                                  |
+| ------- | ------------------- | -------------------------------------------- |
+| 1       | UI/UX design        | Complete desktop and mobile design           |
+| 2       | Public website      | All marketing and destination pages          |
+| 3       | Membership module   | Plans, pricing and entitlements              |
+| 4       | Resort management   | Resorts, rooms and partner information       |
+| 5       | Holiday packages    | Package listing and enquiry                  |
+| 6       | Member portal       | Customer membership dashboard                |
+| 7       | Booking engine      | Holiday reservation workflows                |
+| 8       | CRM                 | Leads, sales and follow-ups                  |
+| 9       | Admin panel         | Centralized business management              |
+| 10      | Payment integration | Membership and booking payments              |
+| 11      | Notification system | Email, WhatsApp and SMS                      |
+| 12      | Reporting system    | Business and operational analytics           |
+| 13      | CMS                 | Website content management                   |
+| 14      | SEO setup           | Metadata, sitemap and analytics              |
+| 15      | QA and testing      | Functional, security and performance testing |
+| 16      | Deployment          | Production setup and launch                  |
+| 17      | Documentation       | Technical and admin documentation            |
+
+# 27. My recommended final product scope
+
+I would position myholidayNow as:
+
+# myholidayNow
+
+## Your Holidays. Your World. Your Membership.
+
+A complete holiday membership and travel ecosystem.
+
+Travel Website
+
+Destinations, resorts and holiday packages.
+
+Membership Platform
+
+Membership plans, benefits and entitlements.
+
+Booking Engine
+
+Reservations, resort availability and vouchers.
+
+Member Portal
+
+Membership and holiday management.
+
+Sales CRM
+
+Leads, sales and membership conversions.
+
+Admin Platform
+
+Complete business and operations management.
+
+The key strategic decision is to build this as a holiday membership management SaaS-style business platform with a premium travel marketplace, not simply a travel website.
+
+That will give myholidayNow the ability to manage the entire customer lifecycle, from the first enquiry to membership purchase, annual holiday entitlement, resort reservation, customer support and future membership renewal.
+
+## 28. Final clarifications needed from the business owner
+
+There are a few commercial decisions that will significantly affect the database, booking engine and membership module. I recommend confirming these before final UI design and development.
+
+## myholidayNow – Business decisions
+
+Select your preferred answers. You can leave any question unanswered.
+
+1\. Which brand/domain should be used?
+
+myholidayNow – myholidays.in
+
+MyHoliday – myholidayz.in
+
+myholidayNow – new domain
+
+2\. Which membership model should we implement?
+
+Existing 4 plans: Escape Select, Escape Elite, Explore Select, Explore Elite
+
+Club Mahindra-style annual holiday entitlement
+
+Club Nebula-style flexible membership
+
+Custom hybrid membership model
+
+3\. How should resort booking work?
+
+Manual reservation team confirmation
+
+Live resort availability API
+
+Both manual and API-based booking
+
+4\. Should non-members also be able to book holidays?
+
+Yes, both members and non-members
+
+Members only
+
+Non-members can enquire; members can book
+
+5\. Which platforms are required for the first launch?
+
+Website + Admin + Member Portal
+
+Website + Admin + Member Portal + CRM
+
+Website + Admin + Member Portal + CRM + Android/iOS apps
+
+Submit business decisions
+
+One final recommendation: Retain the existing four membership plans as the initial commercial baseline, unless the business owner decides to change them. Build the underlying membership engine flexibly so new plans, annual entitlements, room categories, domestic/international access and additional privileges can be introduced without rebuilding the platform.

@@ -1,0 +1,6 @@
+{
+  "name": "myholidayNow",
+  "description": "Premium holiday membership, travel discovery, resort booking platform, and member entitlement management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

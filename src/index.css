@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-heading: "Nunito", sans-serif;
+  --font-script: "Caveat", cursive, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: 'Nunito', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+.font-script {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-logo {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+.font-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
