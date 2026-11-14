@@ -20,16 +20,12 @@ interface HeaderProps {
   currentMode: AppMode;
   onSelectMode: (mode: AppMode) => void;
   onOpenEnquiry: (planName?: string) => void;
-  onOpenLogin: () => void;
-  memberInitials?: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   currentMode,
   onSelectMode,
-  onOpenEnquiry,
-  onOpenLogin,
-  memberInitials = 'RM'
+  onOpenEnquiry
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -141,20 +137,6 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={() => {
-              onSelectMode('member-portal');
-              setIsMobileMenuOpen(false);
-            }}
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-neutral-700 hover:text-[#15803D] border border-neutral-300 rounded-lg hover:border-emerald-300 transition-colors whitespace-nowrap"
-            title="Member Dashboard"
-          >
-            <span className="w-5 h-5 rounded-full bg-[#15803D] text-white flex items-center justify-center font-bold text-[10px]">
-              {memberInitials}
-            </span>
-            <span>Login</span>
-          </button>
-
-          <button
-            onClick={() => {
               onOpenEnquiry();
               setIsMobileMenuOpen(false);
             }}
@@ -246,15 +228,6 @@ export const Header: React.FC<HeaderProps> = ({
               <MessageCircle className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
             </a>
-            <button
-              onClick={() => {
-                onSelectMode('member-portal');
-                setIsMobileMenuOpen(false);
-              }}
-              className="py-2.5 px-3 border border-neutral-300 text-neutral-800 rounded-lg text-xs font-bold"
-            >
-              Login
-            </button>
           </div>
         </div>
       )}

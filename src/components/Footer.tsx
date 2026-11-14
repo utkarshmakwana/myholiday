@@ -177,30 +177,54 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
             </ul>
           </div>
 
-          {/* Business Portals & Direct Links */}
+          {/* Holiday Experiences & Concierge */}
           <div className="space-y-3">
             <div className="text-xs font-bold uppercase tracking-wider text-white">
-              Platform Views
+              Holiday Experiences
             </div>
             <ul className="space-y-2 text-neutral-400">
               <li>
-                <button onClick={() => onSelectMode('member-portal')} className="hover:text-white transition-colors text-left">
-                  Member Portal (Dashboard & Card)
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('membership-plans-section');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Membership Plans (Red & Purple)
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectMode('sales-crm')} className="hover:text-white transition-colors text-left">
-                  Sales CRM & Pipeline
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('resorts-explorer-section');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Resorts ({`1,000+`})
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectMode('admin')} className="hover:text-white transition-colors text-left">
-                  Admin & Reservation Desk
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('destination-catalogues-section');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Destinations & Themes
                 </button>
               </li>
               <li>
-                <button onClick={() => onSelectMode('ai-planner')} className="hover:text-white transition-colors text-left">
-                  AI Holiday Concierge
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('custom-enquiry-section');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Custom Travel Concierge
                 </button>
               </li>
               <li>

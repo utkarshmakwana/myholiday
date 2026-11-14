@@ -39,7 +39,7 @@ export const TestimonialsFAQ: React.FC = () => {
     },
     {
       q: 'Can my parents, children, or friends travel without me?',
-      a: 'Yes. MyHoliday permits authorized guest bookings. You can simply submit an Authorized Guest Booking through your Member Portal or WhatsApp, and our reservation desk will issue the hotel voucher directly in their name.'
+      a: 'Yes. MyHoliday permits authorized guest bookings. You can simply submit an Authorized Guest Booking request through our dedicated WhatsApp concierge or reservation desk, and our team will issue the hotel voucher directly in their name.'
     },
     {
       q: 'How far in advance can I request a resort booking?',

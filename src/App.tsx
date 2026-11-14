@@ -181,7 +181,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#F8FAF8] flex flex-col font-sans text-[#0F172A]">
-      {/* Universal Top Header with Navigation & Mode Switcher */}
+      {/* Top Header with Navigation */}
       <Header
         currentMode={currentMode}
         onSelectMode={(mode) => {
@@ -192,11 +192,6 @@ export function App() {
           setEnquiryModalPlan(planName || 'Purple Membership (5 Years)');
           setIsEnquiryModalOpen(true);
         }}
-        onOpenLogin={() => {
-          setCurrentMode('member-portal');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-        memberInitials="RM"
       />
 
       {/* Toast Notification */}
