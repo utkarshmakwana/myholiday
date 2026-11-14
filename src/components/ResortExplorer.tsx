@@ -52,7 +52,7 @@ export const ResortExplorer: React.FC<ResortExplorerProps> = ({
               <span>Verified Resort Network</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 tracking-tight mt-1">
-              Explore Over 240+ Partner Properties
+              Explore Over 1,000+ Partner Properties Across 195 Countries
             </h2>
             <p className="text-sm text-neutral-600 font-light mt-1 max-w-xl">
               From Coorg coffee plantation chalets and Munnar tea gardens to Havelock Island white sands, Goan plunge villas, and Bali jungle sanctuaries.

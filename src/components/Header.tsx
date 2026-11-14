@@ -83,7 +83,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="hidden xs:inline">WhatsApp</span>
             </a>
             <span className="text-emerald-400/50">|</span>
-            <span className="text-white font-semibold text-[10px] sm:text-[11px]">240+ Resorts</span>
+            <span className="text-white font-semibold text-[10px] sm:text-[11px]">1,000+ Resorts · 195 Countries</span>
           </div>
         </div>
       </div>
@@ -187,13 +187,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => handleNavClick('resorts-explorer-section')}
             className="hover:text-[#15803D] transition-colors whitespace-nowrap shrink-0"
           >
-            Resorts ({`240+`})
-          </button>
-          <button
-            onClick={() => handleNavClick('holiday-packages-section')}
-            className="hover:text-[#15803D] transition-colors whitespace-nowrap shrink-0"
-          >
-            Holiday Packages
+            Resorts ({`1,000+`})
           </button>
           <button
             onClick={() => handleNavClick('destination-catalogues-section')}
@@ -273,15 +267,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('resorts-explorer-section')}
               className="w-full text-left py-2.5 px-3 text-sm font-semibold text-neutral-800 hover:bg-emerald-50 hover:text-[#15803D] rounded-lg transition-colors flex items-center justify-between"
             >
-              <span>Explore Resorts (240+ Verified)</span>
-              <ChevronRight className="w-4 h-4 text-neutral-400" />
-            </button>
-
-            <button
-              onClick={() => handleNavClick('holiday-packages-section')}
-              className="w-full text-left py-2.5 px-3 text-sm font-semibold text-neutral-800 hover:bg-emerald-50 hover:text-[#15803D] rounded-lg transition-colors flex items-center justify-between"
-            >
-              <span>Holiday Packages</span>
+              <span>Explore Resorts (1,000+ Verified Across 195 Countries)</span>
               <ChevronRight className="w-4 h-4 text-neutral-400" />
             </button>
 

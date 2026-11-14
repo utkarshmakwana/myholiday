@@ -19,8 +19,8 @@ export const HowMembershipWorks: React.FC<HowMembershipWorksProps> = ({ onExplor
     },
     {
       num: '03',
-      title: 'Reserve 240+ Partner Resorts',
-      desc: 'Search our 240+ verified properties, select your travel dates, verify room categories, and submit reservations with our Bengaluru team.'
+      title: 'Reserve 1,000+ Partner Resorts',
+      desc: 'Search our 1,000+ verified properties across 195 countries, select your travel dates, verify room categories, and submit reservations with our Bengaluru team.'
     },
     {
       num: '04',

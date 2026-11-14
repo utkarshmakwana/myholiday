@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
             </div>
 
             <p className="text-neutral-300 font-light max-w-sm leading-relaxed">
-              MyHoliday (myholidayz.in) is India's premium holiday membership network, providing family vacation ownership, guaranteed annual vacation quotas, and 240+ verified resorts across India and worldwide.
+              MyHoliday (myholidayz.in) is India's premium holiday membership network, providing family vacation ownership, guaranteed annual vacation quotas, and 1,000+ verified partner resorts across 195 countries worldwide.
             </p>
 
             <div className="space-y-2 pt-2 text-neutral-400">
@@ -111,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
           {/* Featured Destinations */}
           <div className="space-y-3">
             <div className="text-xs font-bold uppercase tracking-wider text-white">
-              Destinations (240+)
+              Destinations (1,000+ in 195 Countries)
             </div>
             <ul className="space-y-2 text-neutral-400">
               <li>

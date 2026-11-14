@@ -28,7 +28,6 @@ import { MembershipComparisonModal } from './components/MembershipComparisonModa
 import { ResortExplorer } from './components/ResortExplorer';
 import { ResortDetailModal } from './components/ResortDetailModal';
 import { HowMembershipWorks } from './components/HowMembershipWorks';
-import { HolidayPackages } from './components/HolidayPackages';
 import { CustomHolidayForm } from './components/CustomHolidayForm';
 import { TestimonialsFAQ } from './components/TestimonialsFAQ';
 import { MemberPortalView } from './components/MemberPortalView';
@@ -246,15 +245,6 @@ export function App() {
               onSelectResort={(resort) => setSelectedResortForDetail(resort)}
               onRequestStay={(resort) => handleRequestStayDirect(resort)}
               initialFilter={heroSearchCriteria}
-            />
-
-            {/* 5. Curated Holiday Packages (Section 6.9 PRD) */}
-            <HolidayPackages
-              packages={packages}
-              onSelectPackage={(pkg) => {
-                setEnquiryModalPlan(`Package: ${pkg.title}`);
-                setIsEnquiryModalOpen(true);
-              }}
             />
 
             {/* Official Destination Catalogues & Master Themes */}

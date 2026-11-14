@@ -504,7 +504,7 @@ export const MemberPortalView: React.FC<MemberPortalViewProps> = ({
                     Book Your Next Member Holiday
                   </h2>
                   <p className="text-xs text-neutral-500 mt-1">
-                    Choose from 240+ verified properties across India and worldwide. Nights will be deducted from your remaining balance of {member.remainingNights} night(s).
+                    Choose from 1,000+ verified properties across 195 countries worldwide. Nights will be deducted from your remaining balance of {member.remainingNights} night(s).
                   </p>
                 </div>
 

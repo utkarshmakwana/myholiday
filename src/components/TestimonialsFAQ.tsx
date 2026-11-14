@@ -23,7 +23,7 @@ export const TestimonialsFAQ: React.FC = () => {
       name: 'Siddharth & Priya Dave',
       plan: 'Explore Select Member (3 Years)',
       city: 'Ahmedabad',
-      quote: 'We compared MyHoliday with other timeshare clubs. Transparent digital entitlement ledger, zero maintenance surcharges in Year 1, and verified 240+ properties made this an obvious decision.',
+      quote: 'We compared MyHoliday with other timeshare clubs. Transparent digital entitlement ledger, zero hidden surcharges, and verified 1,000+ properties across 195 countries made this an obvious decision.',
       rating: 5
     }
   ];
@@ -35,7 +35,7 @@ export const TestimonialsFAQ: React.FC = () => {
     },
     {
       q: 'What happens if I do not use all my holiday nights in a given year?',
-      a: 'Under our Escape Elite and Explore series plans, unutilized vacation nights can be carried forward into the subsequent membership year, ensuring your holiday investment is always protected.'
+      a: 'Under our Red and Purple series plans, unutilized vacation nights can be carried forward into the subsequent membership year, ensuring your holiday investment is always protected.'
     },
     {
       q: 'Can my parents, children, or friends travel without me?',
@@ -47,7 +47,7 @@ export const TestimonialsFAQ: React.FC = () => {
     },
     {
       q: 'What is included in the room entitlement, and are there extra fees?',
-      a: 'Your membership covers the room accommodation and complimentary buffet breakfast for 2 adults and up to 2 children (under 12) in eligible categories across our 240+ partner resorts. Nominal optional fees apply only for room category upgrades (e.g. Presidential Jacuzzi Villa).'
+      a: 'Your membership covers the room accommodation and complimentary buffet breakfast for 2 adults and up to 2 children (under 12) in eligible categories across our 1,000+ partner resorts in 195 countries. Nominal optional fees apply only for room category upgrades (e.g. Presidential Jacuzzi Villa).'
     },
     {
       q: 'Where is the registered office of MyHoliday located?',

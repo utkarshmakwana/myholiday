@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
             </h1>
 
             <p className="text-sm sm:text-lg text-emerald-100/90 font-light max-w-2xl leading-relaxed">
-              Lock in transparent, inflation-free holidays for the next 5 to 10 years with our Red & Purple Memberships. Enjoy 7 guaranteed nights every year across 240+ verified resorts in Coorg, Munnar, Goa, Andaman, Manali, Bali, and the Maldives.
+              Lock in transparent, inflation-free holidays for the next 5 to 10 years with our Red & Purple Memberships. Enjoy 7 guaranteed nights every year across 1,000+ verified partner resorts and 1,000+ popular destinations across 195 countries worldwide.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
                 onClick={onExploreResorts}
                 className="w-full sm:w-auto px-6 py-3.5 text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 active:scale-[0.98] border border-white/30 rounded-lg backdrop-blur-xs transition-all text-center"
               >
-                Explore 240+ Resorts
+                Explore 1,000+ Resorts
               </button>
             </div>
 
@@ -118,12 +118,12 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
 
             {/* Floating Trust Badge */}
             <div className="absolute -bottom-4 -left-4 bg-white text-neutral-900 rounded-xl p-3 shadow-xl border border-emerald-100 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#15803D] text-white flex items-center justify-center font-bold text-sm">
-                240+
+              <div className="w-10 h-10 rounded-lg bg-[#15803D] text-white flex items-center justify-center font-bold text-xs">
+                1,000+
               </div>
               <div className="text-xs">
                 <div className="font-bold text-neutral-900">Partner Resorts</div>
-                <div className="text-neutral-500 text-[11px]">Across India & Abroad</div>
+                <div className="text-neutral-500 text-[11px]">Across 195 Countries</div>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
                 onChange={(e) => setDestination(e.target.value)}
                 className="w-full text-xs font-medium bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-2.5 text-neutral-800 focus:outline-none focus:ring-1 focus:ring-[#15803D]"
               >
-                <option value="">All Destinations (240+)</option>
+                <option value="">All Destinations (1,000+)</option>
                 <option value="Coorg">Coorg (Coffee Estates & Chalets)</option>
                 <option value="Munnar">Munnar (Tea Valley Sanctuaries)</option>
                 <option value="Andaman">Andaman (Havelock White Sand Beach)</option>
@@ -222,23 +222,23 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
           </form>
         </div>
 
-        {/* Quantitative Proof Metrics Strip from Official Brand Showcase (Image 2) */}
+        {/* Quantitative Proof Metrics Strip from Official Brand Showcase */}
         <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
           <div className="flex flex-col items-center">
-            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">240+</div>
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">1,000+</div>
             <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Partner Resorts</div>
           </div>
           <div className="flex flex-col items-center">
-            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">50+</div>
-            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Destinations</div>
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">195</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Countries Worldwide</div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">1,000+</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Popular Destinations</div>
           </div>
           <div className="flex flex-col items-center">
             <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">15,000+</div>
             <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Happy Members</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">24+</div>
-            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Hour Support</div>
           </div>
         </div>
       </div>

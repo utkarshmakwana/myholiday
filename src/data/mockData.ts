@@ -34,7 +34,7 @@ export const MEMBERSHIP_PLANS: MembershipPlan[] = [
     bookingWindow: '15 to 180 days advance',
     seasonEligibility: 'All Regular & High Seasons',
     priorityBooking: true,
-    resortCount: '240+ Partner Resorts across India & Asia',
+    resortCount: '1,000+ Partner Resorts across 195 Countries',
     highlights: [
       '35 Total Holiday Nights (7 Nights / 8 Days annually for 5 years)',
       'India & Asia coverage: Coorg, Goa, Munnar, Manali, Thailand & Sri Lanka',
@@ -64,7 +64,7 @@ export const MEMBERSHIP_PLANS: MembershipPlan[] = [
     bookingWindow: '15 to 240 days advance',
     seasonEligibility: 'All Regular & High Seasons',
     priorityBooking: true,
-    resortCount: '240+ Partner Resorts across India & Asia',
+    resortCount: '1,000+ Partner Resorts across 195 Countries',
     highlights: [
       '70 Total Holiday Nights (7 Nights / 8 Days annually for 10 years)',
       '10-year inflation-proof luxury vacations across India & Asia',
@@ -94,7 +94,7 @@ export const MEMBERSHIP_PLANS: MembershipPlan[] = [
     bookingWindow: '10 to 300 days advance',
     seasonEligibility: 'All Seasons (India + International)',
     priorityBooking: true,
-    resortCount: '300+ Global Luxury Properties & Villas',
+    resortCount: '1,000+ Global Luxury Properties & Villas across 195 Countries',
     recommended: true,
     highlights: [
       '35 Prime Global Holiday Nights across 5 years',
@@ -125,7 +125,7 @@ export const MEMBERSHIP_PLANS: MembershipPlan[] = [
     bookingWindow: '7 to 365 days advance (Guaranteed)',
     seasonEligibility: 'All 365 Days Access (Zero Blackout Dates)',
     priorityBooking: true,
-    resortCount: '350+ Global Signature Resorts & Suites',
+    resortCount: '1,000+ Global Signature Resorts & Suites across 195 Countries',
     highlights: [
       '70 Global Ultra-Luxury Nights (7 Nights annually for 10 years)',
       'The Ultimate Global Tier: Worldwide access (195 countries catalogued)',

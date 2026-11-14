@@ -323,7 +323,7 @@ export const AdminOperationsView: React.FC<AdminOperationsViewProps> = ({
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-base font-bold text-neutral-900">
-                  Resort Network & Partner Inventory (240+ Properties)
+                  Resort Network & Partner Inventory (1,000+ Properties Across 195 Countries)
                 </h3>
                 <p className="text-xs text-neutral-500">
                   Verified partner properties spanning Coorg, Munnar, Andaman, Goa, Manali, Udaipur, Bali, and Maldives.
