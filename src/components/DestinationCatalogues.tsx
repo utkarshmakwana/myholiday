@@ -761,3 +761,4 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
     </section>
   );
 };
+
