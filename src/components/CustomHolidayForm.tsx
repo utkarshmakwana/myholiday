@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Lead } from '../types';
 import { COMPANY_CONTACT } from '../data/mockData';
-import { Send, CheckCircle2, ShieldCheck, Sparkles, Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { sendEnquiryEmail, PRIMARY_ENQUIRY_EMAIL, CC_ENQUIRY_EMAIL } from '../services/enquiryMailService';
+import { Send, CheckCircle2, ShieldCheck, Sparkles, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 interface CustomHolidayFormProps {
   onAddLead: (lead: Lead) => void;
@@ -27,15 +28,17 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
   const [specialRequests, setSpecialRequests] = useState('');
 
   const [submittedEnquiryId, setSubmittedEnquiryId] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!fullName || !phone || !email) {
-      alert('Please fill in your name, phone number, and email.');
+      alert('Please fill in your name, mobile number, and email address.');
       return;
     }
 
+    setIsSubmitting(true);
     const newEnquiryId = `MYH-ENQ-${Math.floor(1000 + Math.random() * 9000)}`;
 
     const newLead: Lead = {
@@ -55,14 +58,33 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
       createdDate: new Date().toISOString().split('T')[0],
       followUpDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
       notes: [
+        `Auto-emailed to ${PRIMARY_ENQUIRY_EMAIL} (cc: ${CC_ENQUIRY_EMAIL})`,
         `Enquiry via myholidayz.in for ${adults} adults & ${children} kids.`,
         `Departure city: ${city || 'Bengaluru'}. Travel date: ${travelDate}.`,
         specialRequests ? `Special notes: ${specialRequests}` : 'No special notes.'
       ]
     };
 
+    // Auto-mail to enquiry@myholidayz.in and cc um18218@gmail.com
+    await sendEnquiryEmail({
+      enquiryNumber: newEnquiryId,
+      fullName,
+      phone,
+      email,
+      city,
+      interestedPlan,
+      preferredDestination: destination,
+      budgetRange: budget,
+      travelDate,
+      adults,
+      children,
+      specialRequests,
+      source: 'Request Membership Callback & Free Brochure Form'
+    });
+
     onAddLead(newLead);
     setSubmittedEnquiryId(newEnquiryId);
+    setIsSubmitting(false);
   };
 
   return (
@@ -145,24 +167,40 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
           {/* Right Column: Inbound Enquiry Form */}
           <div className="lg:col-span-7 bg-[#F8FAF8] p-4 sm:p-8 rounded-2xl border border-emerald-100 shadow-sm">
             {submittedEnquiryId ? (
-              <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#15803D] flex items-center justify-center mx-auto">
+              <div className="py-10 text-center space-y-4">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 text-[#15803D] flex items-center justify-center mx-auto shadow-xs">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
 
-                <div className="space-y-1">
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#15803D]">
-                    Enquiry Logged on myholidayz.in
+                <div className="space-y-1.5">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-[#15803D] rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-200">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>Enquiry Dispatched Successfully</span>
                   </div>
                   <h3 className="text-2xl font-bold text-neutral-900">
                     Reference: {submittedEnquiryId}
                   </h3>
-                  <p className="text-xs text-neutral-600 max-w-md mx-auto pt-2">
-                    Thank you, {fullName}! Your request has been assigned to our Bengaluru membership team. An official proposal with full resort catalogues will be sent to your WhatsApp and email.
+                  <p className="text-xs text-neutral-600 max-w-md mx-auto pt-1 leading-relaxed">
+                    Thank you, <strong className="text-neutral-900">{fullName}</strong>! Your holiday consultation request has been automatically routed to our reservations desk at <strong className="text-[#15803D]">{PRIMARY_ENQUIRY_EMAIL}</strong> and cc'd to <strong className="text-neutral-800">{CC_ENQUIRY_EMAIL}</strong>.
+                  </p>
+                  <p className="text-xs text-neutral-500 max-w-md mx-auto">
+                    A senior holiday consultant from our Bengaluru Shivaji Nagar office will call you shortly on <span className="font-bold text-neutral-800 font-mono">{phone}</span> with custom tariffs and resort brochures.
                   </p>
                 </div>
 
-                <div className="pt-4 flex justify-center gap-3">
+                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href={`https://wa.me/917353333701?text=${encodeURIComponent(
+                      `Hello MyHoliday, I have submitted enquiry ref ${submittedEnquiryId} for ${interestedPlan}. My phone is ${phone}. Please share resort catalogues and details.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-4 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-xs"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Instant WhatsApp Connect</span>
+                  </a>
+
                   <button
                     onClick={() => {
                       setSubmittedEnquiryId(null);
@@ -171,7 +209,7 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
                       setEmail('');
                       setSpecialRequests('');
                     }}
-                    className="px-4 py-2 text-xs font-bold text-[#15803D] bg-white border border-emerald-300 rounded-lg hover:bg-emerald-50 transition-colors"
+                    className="w-full sm:w-auto px-4 py-2.5 text-xs font-bold text-[#15803D] bg-white border border-emerald-300 rounded-lg hover:bg-emerald-50 transition-colors"
                   >
                     Submit Another Enquiry
                   </button>
@@ -355,11 +393,25 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-3 px-6 bg-[#DC2626] hover:bg-[#b91c1c] text-white text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full py-3.5 px-6 bg-[#DC2626] hover:bg-[#b91c1c] active:scale-[0.99] disabled:opacity-75 disabled:cursor-wait text-white text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    <span>Submit Enquiry & Get Instant Callback</span>
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <span>Transmitting Request to Reservations...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Request Membership Callback & Free Brochure</span>
+                      </>
+                    )}
                   </button>
+                  <div className="mt-2 text-[11px] text-neutral-500 text-center flex items-center justify-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#15803D]" />
+                    <span>Auto-dispatched to enquiry@myholidayz.in (cc: um18218@gmail.com)</span>
+                  </div>
                 </div>
               </form>
             )}

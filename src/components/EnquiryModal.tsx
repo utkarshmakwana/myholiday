@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Lead } from '../types';
 import { COMPANY_CONTACT } from '../data/mockData';
-import { X, CheckCircle2, Sparkles, Send, Phone } from 'lucide-react';
+import { sendEnquiryEmail, PRIMARY_ENQUIRY_EMAIL, CC_ENQUIRY_EMAIL } from '../services/enquiryMailService';
+import { X, CheckCircle2, Sparkles, Send, ShieldCheck, MessageCircle } from 'lucide-react';
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -20,15 +21,17 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
-  const [plan, setPlan] = useState(preselectedPlan || 'Escape Elite');
+  const [plan, setPlan] = useState(preselectedPlan || 'Purple Membership (5 Years)');
   const [submittedId, setSubmittedId] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
 
+    setIsSubmitting(true);
     const enqId = `MYH-ENQ-${Math.floor(2000 + Math.random() * 8000)}`;
     const newLead: Lead = {
       id: `lead-${Date.now()}`,
@@ -46,11 +49,25 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
       assignedTo: 'Bengaluru Head Office',
       createdDate: new Date().toISOString().split('T')[0],
       followUpDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
-      notes: [`Inbound modal enquiry for ${plan} on myholidayz.in.`]
+      notes: [
+        `Auto-emailed to ${PRIMARY_ENQUIRY_EMAIL} (cc: ${CC_ENQUIRY_EMAIL})`,
+        `Inbound modal enquiry for ${plan} on myholidayz.in.`
+      ]
     };
+
+    await sendEnquiryEmail({
+      enquiryNumber: enqId,
+      fullName: name,
+      phone,
+      email: email || 'client@myholidayz.in',
+      city,
+      interestedPlan: plan,
+      source: 'Priority Consultation Modal'
+    });
 
     onAddLead(newLead);
     setSubmittedId(enqId);
+    setIsSubmitting(false);
   };
 
   return (
@@ -89,22 +106,40 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         <div className="p-6">
           {submittedId ? (
             <div className="py-8 text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-emerald-100 text-[#15803D] flex items-center justify-center mx-auto">
-                <CheckCircle2 className="w-6 h-6" />
+              <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#15803D] flex items-center justify-center mx-auto shadow-xs">
+                <CheckCircle2 className="w-7 h-7" />
               </div>
-              <h4 className="text-lg font-bold text-neutral-900">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-[#15803D] rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-200">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Enquiry Transmitted</span>
+              </div>
+              <h4 className="text-xl font-bold text-neutral-900">
                 Consultation Request Logged!
               </h4>
-              <p className="text-xs text-neutral-600 max-w-xs mx-auto">
-                Reference ID: <strong className="font-mono text-[#15803D] font-bold">{submittedId}</strong>. A dedicated holiday advisor from our Bengaluru desk will call you shortly on <span className="font-bold text-neutral-800">{phone}</span>.
+              <p className="text-xs text-neutral-600 max-w-sm mx-auto leading-relaxed">
+                Reference ID: <strong className="font-mono text-[#15803D] font-bold">{submittedId}</strong>. A copy has been automatically dispatched to <span className="font-semibold text-neutral-800">{PRIMARY_ENQUIRY_EMAIL}</span> (cc: {CC_ENQUIRY_EMAIL}).
               </p>
-              <div className="pt-3">
+              <p className="text-xs text-neutral-500 max-w-sm mx-auto">
+                Our Bengaluru holiday desk will call you shortly on <span className="font-bold text-neutral-800 font-mono">{phone}</span>.
+              </p>
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-2.5">
+                <a
+                  href={`https://wa.me/917353333701?text=${encodeURIComponent(
+                    `Hello MyHoliday, I requested a callback for ${plan} (Ref: ${submittedId}). My phone is ${phone}.`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-4 py-2 text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba59] rounded-lg transition-colors flex items-center justify-center gap-1.5"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  <span>WhatsApp Concierge</span>
+                </a>
                 <button
                   onClick={() => {
                     setSubmittedId(null);
                     onClose();
                   }}
-                  className="px-4 py-2 text-xs font-bold text-white bg-[#15803D] rounded-lg hover:bg-[#166534]"
+                  className="w-full sm:w-auto px-4 py-2 text-xs font-bold text-neutral-700 bg-neutral-100 hover:bg-neutral-200 rounded-lg transition-colors"
                 >
                   Close Window
                 </button>
@@ -149,9 +184,10 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-neutral-700 font-bold mb-1">Email Address</label>
+                <label className="block text-neutral-700 font-bold mb-1">Email Address *</label>
                 <input
                   type="email"
+                  required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ramesh@example.com"
@@ -176,11 +212,25 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#DC2626] hover:bg-[#b91c1c] text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full py-3 bg-[#DC2626] hover:bg-[#b91c1c] active:scale-[0.99] disabled:opacity-75 disabled:cursor-wait text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                 >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Request Instant Callback & Brochure</span>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span>Transmitting Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-3.5 h-3.5" />
+                      <span>Request Membership Callback & Free Brochure</span>
+                    </>
+                  )}
                 </button>
+                <div className="mt-2 text-[10px] text-neutral-500 text-center flex items-center justify-center gap-1">
+                  <ShieldCheck className="w-3 h-3 text-[#15803D]" />
+                  <span>Auto-dispatched to enquiry@myholidayz.in (cc: um18218@gmail.com)</span>
+                </div>
               </div>
             </form>
           )}
