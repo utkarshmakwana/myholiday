@@ -39,10 +39,10 @@ export const MembershipPlans: React.FC<MembershipPlansProps> = ({
 
           {/* Interactive filter control */}
           <div className="pt-4 flex justify-center">
-            <div className="inline-flex items-center p-1 bg-neutral-100 rounded-lg">
+            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 p-1 bg-neutral-100 rounded-xl max-w-full">
               <button
                 onClick={() => setSelectedFilter('all')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all ${
+                className={`px-3.5 sm:px-4 py-1.5 text-xs font-bold rounded-lg transition-all ${
                   selectedFilter === 'all'
                     ? 'bg-[#0F172A] text-white shadow-xs'
                     : 'text-neutral-600 hover:text-neutral-900'
@@ -52,25 +52,25 @@ export const MembershipPlans: React.FC<MembershipPlansProps> = ({
               </button>
               <button
                 onClick={() => setSelectedFilter('red')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 sm:px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 ${
                   selectedFilter === 'red'
                     ? 'bg-[#DC2626] text-white shadow-xs'
                     : 'text-neutral-600 hover:text-[#DC2626]'
                 }`}
               >
                 <span className="w-2 h-2 rounded-full bg-[#DC2626] border border-white" />
-                Red Membership (India & Asia)
+                <span>Red (India & Asia)</span>
               </button>
               <button
                 onClick={() => setSelectedFilter('purple')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all flex items-center gap-1.5 ${
+                className={`px-3.5 sm:px-4 py-1.5 text-xs font-bold rounded-lg transition-all flex items-center gap-1.5 ${
                   selectedFilter === 'purple'
                     ? 'bg-[#7E22CE] text-white shadow-xs'
                     : 'text-neutral-600 hover:text-[#7E22CE]'
                 }`}
               >
                 <span className="w-2 h-2 rounded-full bg-[#9333EA] border border-white" />
-                Purple Membership (India & Intl)
+                <span>Purple (India & Intl)</span>
               </button>
             </div>
           </div>

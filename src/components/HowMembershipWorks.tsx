@@ -10,7 +10,7 @@ export const HowMembershipWorks: React.FC<HowMembershipWorksProps> = ({ onExplor
     {
       num: '01',
       title: 'Select Your Membership Tier',
-      desc: 'Choose from Escape Series (Domestic India) or Explore Series (Worldwide) in 3 or 5-year tenures. Lock in present-day tariffs and avoid hotel inflation.'
+      desc: 'Choose from Red Membership (India & Asia) or Purple Membership (India & International) in 5 or 10-year tenures. Lock in present-day tariffs and avoid hotel inflation.'
     },
     {
       num: '02',

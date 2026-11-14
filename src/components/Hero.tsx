@@ -34,10 +34,10 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#15803D]/60" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 pb-12 sm:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Headlines & CTA */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-semibold tracking-wide border border-emerald-500/30">
               <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
               <span>India's Trusted Family Holiday Membership</span>
@@ -45,24 +45,24 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
               <span>myholidayz.in</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.18]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.18]">
               Make Every Vacation <br />
               <span className="text-[#4ade80]">Unforgettable</span> with <br />
               <span className="inline-flex items-center gap-2 text-white">
-                <span className="font-script text-4xl sm:text-5xl lg:text-6xl text-[#4ade80] -rotate-3 inline-block font-bold">My</span>
+                <span className="font-script text-3xl sm:text-5xl lg:text-6xl text-[#4ade80] -rotate-3 inline-block font-bold">My</span>
                 <span className="tracking-tight font-black text-white">Holiday</span>
-                <span className="text-white/90 font-semibold text-3xl sm:text-4xl lg:text-5xl ml-1">Membership</span>
+                <span className="text-white/90 font-semibold text-2xl sm:text-4xl lg:text-5xl ml-1">Membership</span>
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-emerald-100/90 font-light max-w-2xl leading-relaxed">
-              Lock in transparent, inflation-free holidays for the next 3 to 5 years. Enjoy 7 guaranteed nights every year across 240+ verified resorts in Coorg, Munnar, Goa, Andaman, Manali, Bali, and the Maldives.
+            <p className="text-sm sm:text-lg text-emerald-100/90 font-light max-w-2xl leading-relaxed">
+              Lock in transparent, inflation-free holidays for the next 5 to 10 years with our Red & Purple Memberships. Enjoy 7 guaranteed nights every year across 240+ verified resorts in Coorg, Munnar, Goa, Andaman, Manali, Bali, and the Maldives.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
               <button
                 onClick={onExplorePlans}
-                className="px-6 py-3.5 text-sm font-bold text-white bg-[#15803D] hover:bg-[#166534] active:scale-[0.98] rounded-lg transition-all shadow-lg shadow-emerald-900/40 flex items-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 text-xs sm:text-sm font-bold text-white bg-[#15803D] hover:bg-[#166534] active:scale-[0.98] rounded-lg transition-all shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2"
               >
                 <span>View Membership Plans</span>
                 <ArrowRight className="w-4 h-4" />
@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
 
               <button
                 onClick={onExploreResorts}
-                className="px-6 py-3.5 text-sm font-bold text-white bg-white/10 hover:bg-white/20 active:scale-[0.98] border border-white/30 rounded-lg backdrop-blur-xs transition-all"
+                className="w-full sm:w-auto px-6 py-3.5 text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 active:scale-[0.98] border border-white/30 rounded-lg backdrop-blur-xs transition-all text-center"
               >
                 Explore 240+ Resorts
               </button>
@@ -111,7 +111,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
                   <span>Kerala</span>
                 </div>
                 <div className="text-sm font-medium text-neutral-200 mt-0.5">
-                  Included in Escape & Explore Membership Tiers
+                  Included in Red & Purple Membership Tiers
                 </div>
               </div>
             </div>

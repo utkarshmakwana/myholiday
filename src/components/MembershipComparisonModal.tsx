@@ -19,37 +19,42 @@ export const MembershipComparisonModal: React.FC<MembershipComparisonModalProps>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
+      <div className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden my-4 sm:my-8">
         {/* Header */}
-        <div className="px-6 py-5 bg-[#15803D] text-white flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-white p-1 rounded">
+        <div className="px-4 sm:px-6 py-4 sm:py-5 bg-[#15803D] text-white flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="bg-white p-1 rounded shrink-0">
               <img
                 src={COMPANY_CONTACT.logoPath}
                 alt="MyHoliday Logo"
-                className="h-7 w-auto object-contain"
+                className="h-6 sm:h-7 w-auto object-contain"
               />
             </div>
             <div>
-              <div className="text-xs font-bold text-emerald-200 uppercase tracking-wider">
+              <div className="text-[10px] sm:text-xs font-bold text-emerald-200 uppercase tracking-wider">
                 Compare MyHoliday Memberships
               </div>
-              <h3 className="text-lg font-bold text-white mt-0.5">
+              <h3 className="text-base sm:text-lg font-bold text-white mt-0.5">
                 Side-by-Side Plan Comparison Matrix
               </h3>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-white/80 hover:text-white rounded-lg transition-colors"
+            className="p-1.5 text-white/80 hover:text-white rounded-lg transition-colors shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
+        {/* Mobile Swipe Notice */}
+        <div className="md:hidden px-4 py-2 bg-emerald-50 border-b border-emerald-100 text-[11px] text-[#15803D] text-center font-medium">
+          ← Swipe horizontally to compare all 4 plans →
+        </div>
+
         {/* Comparison Table */}
-        <div className="overflow-x-auto p-6">
+        <div className="overflow-x-auto p-3 sm:p-6 no-scrollbar">
           <table className="w-full text-left text-xs">
             <thead>
               <tr className="border-b border-neutral-200">

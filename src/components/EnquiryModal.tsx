@@ -54,9 +54,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden my-6">
-        <div className="p-6 bg-[#15803D] text-white flex items-center justify-between">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
+      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden my-4 sm:my-6">
+        <div className="p-4 sm:p-6 bg-[#15803D] text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="bg-white p-1 rounded">
               <img

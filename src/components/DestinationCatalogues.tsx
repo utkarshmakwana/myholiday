@@ -87,13 +87,13 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full lg:w-auto shrink-0">
               <a
                 href="/catalogues/MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
                 download="MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center gap-2 shadow-sm"
+                className="w-full sm:w-auto px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Download className="w-4 h-4" />
                 <span>Kids Dream Catalogue (PDF)</span>
@@ -104,7 +104,7 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
                 download="My_Holidays_Historical_Destinations_Catalogue.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2.5 bg-amber-600 hover:bg-amber-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center gap-2 shadow-sm"
+                className="w-full sm:w-auto px-4 py-2.5 bg-amber-600 hover:bg-amber-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Download className="w-4 h-4" />
                 <span>Historical Destinations (PDF)</span>
