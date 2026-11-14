@@ -10,6 +10,7 @@ interface AIHolidayPlannerViewProps {
   member: MemberUser;
   onRequestResort: (resort: Resort) => void;
   onSelectPlan: (plan: MembershipPlan) => void;
+  onBackToWebsite?: () => void;
 }
 
 interface AIPlanResult {
@@ -27,7 +28,8 @@ export const AIHolidayPlannerView: React.FC<AIHolidayPlannerViewProps> = ({
   plans,
   member,
   onRequestResort,
-  onSelectPlan
+  onSelectPlan,
+  onBackToWebsite
 }) => {
   const [userInput, setUserInput] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
@@ -126,6 +128,18 @@ export const AIHolidayPlannerView: React.FC<AIHolidayPlannerViewProps> = ({
   return (
     <div className="min-h-screen bg-[#F8FAF8] py-8">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        {onBackToWebsite && (
+          <div className="mb-4 flex items-center justify-between">
+            <button
+              onClick={onBackToWebsite}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-neutral-700 bg-white hover:bg-neutral-100 border border-neutral-300 rounded-lg shadow-xs transition-colors cursor-pointer"
+            >
+              <Compass className="w-3.5 h-3.5 text-[#15803D]" />
+              <span>← Back to Website</span>
+            </button>
+          </div>
+        )}
+
         {/* Header */}
         <div className="bg-[#15803D] text-white p-6 sm:p-8 rounded-2xl shadow-sm text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/20 text-emerald-200 rounded-full text-xs font-bold uppercase tracking-wider">

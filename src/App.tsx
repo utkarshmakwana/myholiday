@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Sparkles, MessageCircle } from 'lucide-react';
 import {
   AppMode,
   MembershipPlan,
@@ -11,6 +12,7 @@ import {
   SupportTicket
 } from './types';
 import {
+  COMPANY_CONTACT,
   MEMBERSHIP_PLANS,
   INITIAL_RESORTS,
   INITIAL_MEMBER,
@@ -307,6 +309,10 @@ export function App() {
             member={member}
             onRequestResort={(resort) => handleRequestStayDirect(resort)}
             onSelectPlan={(plan) => handleOpenPlanEnquiry(plan)}
+            onBackToWebsite={() => {
+              setCurrentMode('website');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         )}
       </main>
@@ -335,6 +341,44 @@ export function App() {
         onAddLead={handleAddLead}
         preselectedPlan={enquiryModalPlan}
       />
+
+      {/* Floating Action Buttons: WhatsApp & AI Holiday Planner */}
+      <div className="fixed bottom-5 right-4 sm:right-6 z-50 flex items-center gap-2.5 sm:gap-3">
+        {/* Floating WhatsApp Action */}
+        <a
+          href={COMPANY_CONTACT.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all border-2 border-white group relative shrink-0"
+          title="Chat with us on WhatsApp"
+          aria-label="WhatsApp Chat"
+        >
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+          <span className="absolute bottom-14 right-0 bg-neutral-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+            Chat on WhatsApp
+          </span>
+        </a>
+
+        {/* Floating AI Holiday Planner Button */}
+        <button
+          onClick={() => {
+            if (currentMode === 'ai-planner') {
+              setCurrentMode('website');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+              setCurrentMode('ai-planner');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+          className="flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#15803D] via-[#166534] to-[#0F172A] text-white shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all border-2 border-white/80 cursor-pointer group"
+          aria-label="AI Holiday Planner"
+        >
+          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#4ade80] animate-pulse shrink-0" />
+          <span className="text-xs sm:text-sm font-extrabold tracking-wide whitespace-nowrap">
+            {currentMode === 'ai-planner' ? 'Close AI Planner' : 'AI Holiday Planner'}
+          </span>
+        </button>
+      </div>
 
       {/* Global Luxury Footer */}
       <Footer
