@@ -35,6 +35,7 @@ import { MemberPortalView } from './components/MemberPortalView';
 import { SalesCRMView } from './components/SalesCRMView';
 import { AdminOperationsView } from './components/AdminOperationsView';
 import { AIHolidayPlannerView } from './components/AIHolidayPlannerView';
+import { DestinationCatalogues } from './components/DestinationCatalogues';
 import { EnquiryModal } from './components/EnquiryModal';
 import { Footer } from './components/Footer';
 
@@ -55,7 +56,7 @@ export function App() {
   // Modals & Overlays State
   const [isComparisonModalOpen, setIsComparisonModalOpen] = useState(false);
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
-  const [enquiryModalPlan, setEnquiryModalPlan] = useState<string>('Escape Elite');
+  const [enquiryModalPlan, setEnquiryModalPlan] = useState<string>('Purple Membership (5 Years)');
   const [selectedResortForDetail, setSelectedResortForDetail] = useState<Resort | null>(null);
   const [bookingPrefillResort, setBookingPrefillResort] = useState<Resort | null>(null);
   const [heroSearchCriteria, setHeroSearchCriteria] = useState<{ destination: string; category: string }>({ destination: '', category: '' });
@@ -166,7 +167,7 @@ export function App() {
 
   // Navigational Helpers
   const handleOpenPlanEnquiry = (plan?: MembershipPlan) => {
-    setEnquiryModalPlan(plan ? plan.name : 'Escape Elite');
+    setEnquiryModalPlan(plan ? plan.name : 'Purple Membership (5 Years)');
     setIsEnquiryModalOpen(true);
   };
 
@@ -187,7 +188,7 @@ export function App() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         onOpenEnquiry={(planName) => {
-          setEnquiryModalPlan(planName || 'Escape Elite');
+          setEnquiryModalPlan(planName || 'Purple Membership (5 Years)');
           setIsEnquiryModalOpen(true);
         }}
         onOpenLogin={() => {
@@ -256,10 +257,18 @@ export function App() {
               }}
             />
 
+            {/* Official Destination Catalogues & Master Themes */}
+            <DestinationCatalogues
+              onOpenEnquiry={(targetName) => {
+                setEnquiryModalPlan(targetName || 'Purple Membership (5 Years)');
+                setIsEnquiryModalOpen(true);
+              }}
+            />
+
             {/* 6. Customized Holiday & Membership Enquiry Form (Section 6.10 PRD) */}
             <CustomHolidayForm
               onAddLead={handleAddLead}
-              prefilledPlan="Explore Elite"
+              prefilledPlan="Purple Membership (5 Years)"
               prefilledDestination={heroSearchCriteria.destination || 'Goa & Coastal Escapes'}
             />
 
@@ -344,7 +353,7 @@ export function App() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         onOpenEnquiry={() => {
-          setEnquiryModalPlan('Escape Elite');
+          setEnquiryModalPlan('Purple Membership (5 Years)');
           setIsEnquiryModalOpen(true);
         }}
       />

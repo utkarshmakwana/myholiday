@@ -71,6 +71,16 @@ export const MembershipComparisonModal: React.FC<MembershipComparisonModalProps>
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-100">
+              {/* Row: Annual Maintenance Charge (AMC) */}
+              <tr className="bg-amber-50/40">
+                <td className="py-3 px-3 font-semibold text-amber-900">Annual Maintenance Charge (AMC)</td>
+                {plans.map((p) => (
+                  <td key={p.id} className="py-3 px-3 text-center font-tabular font-bold text-amber-900">
+                    {p.amcLabel || (p.priceINR > 1000000 ? '₹39,999 + GST' : '₹24,999 + GST')}
+                  </td>
+                ))}
+              </tr>
+
               {/* Row: Annual Holiday Entitlement */}
               <tr>
                 <td className="py-3 px-3 font-semibold text-neutral-800">Annual Holiday Entitlement</td>

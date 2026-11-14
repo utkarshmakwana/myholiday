@@ -253,10 +253,10 @@ export const CustomHolidayForm: React.FC<CustomHolidayFormProps> = ({
                       onChange={(e) => setInterestedPlan(e.target.value)}
                       className="w-full text-xs bg-white border border-neutral-300 rounded-lg p-2.5 text-neutral-800 focus:outline-none focus:ring-1 focus:ring-[#15803D]"
                     >
-                      <option value="Escape Select">Escape Select (3 Yr Domestic)</option>
-                      <option value="Escape Elite">Escape Elite (5 Yr Domestic - Most Popular)</option>
-                      <option value="Explore Select">Explore Select (3 Yr Global)</option>
-                      <option value="Explore Elite">Explore Elite (5 Yr Worldwide)</option>
+                      <option value="Red Membership (5 Years)">Red Membership (5 Years - India & Asia)</option>
+                      <option value="Red Membership (10 Years)">Red Membership (10 Years - India & Asia)</option>
+                      <option value="Purple Membership (5 Years)">Purple Membership (5 Years - India & Intl - Popular)</option>
+                      <option value="Purple Membership (10 Years)">Purple Membership (10 Years - India & Intl - Flagship)</option>
                     </select>
                   </div>
 

@@ -181,6 +181,17 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={() => {
               onSelectMode('website');
+              const el = document.getElementById('destination-catalogues-section');
+              el?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hover:text-[#15803D] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1 text-emerald-800"
+          >
+            <span>Catalogues</span>
+            <span className="text-[10px] bg-emerald-100 text-[#15803D] px-1.5 py-0.2 rounded font-bold">PDF</span>
+          </button>
+          <button
+            onClick={() => {
+              onSelectMode('website');
               const el = document.getElementById('how-it-works-section');
               el?.scrollIntoView({ behavior: 'smooth' });
             }}

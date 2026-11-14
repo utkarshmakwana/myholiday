@@ -16,106 +16,124 @@ export const COMPANY_CONTACT = {
 
 export const MEMBERSHIP_PLANS: MembershipPlan[] = [
   {
-    id: 'plan-escape-select',
-    name: 'Escape Select',
-    category: 'Escape',
-    tenureYears: 3,
-    coverage: 'Domestic',
-    priceINR: 195000,
-    downPaymentINR: 35000,
-    emiMonthlyINR: 4999,
-    annualNights: 7,
-    totalNights: 21,
-    roomCategory: 'Standard',
-    occupancy: { adults: 2, children: 2 },
-    bookingWindow: '15 to 120 days advance',
-    seasonEligibility: 'Regular & Shoulder Seasons',
-    priorityBooking: false,
-    resortCount: '180+ Domestic Resorts across India',
-    highlights: [
-      '21 Total Holiday Nights (7 Nights / 8 Days annually for 3 years)',
-      'Access to curated 4-star boutique resorts & hill retreats',
-      'Complimentary buffet breakfast for family',
-      'Split stays into 2 or 3-night mini vacations',
-      'Flexible no-cost EMI installment options'
-    ]
-  },
-  {
-    id: 'plan-escape-elite',
-    name: 'Escape Elite',
-    category: 'Escape',
+    id: 'plan-red-5yr',
+    name: 'Red Membership (5 Years)',
+    category: 'Red',
+    tierColor: 'red',
     tenureYears: 5,
-    coverage: 'Domestic',
-    priceINR: 345000,
-    downPaymentINR: 55000,
-    emiMonthlyINR: 5899,
+    coverage: 'India & Asia',
+    priceINR: 499999,
+    amcINR: 24999,
+    amcLabel: '₹24,999 + GST',
+    downPaymentINR: 75000,
+    emiMonthlyINR: 8999,
     annualNights: 7,
     totalNights: 35,
     roomCategory: 'Deluxe',
     occupancy: { adults: 2, children: 2 },
-    bookingWindow: '10 to 180 days advance',
+    bookingWindow: '15 to 180 days advance',
     seasonEligibility: 'All Regular & High Seasons',
     priorityBooking: true,
-    resortCount: '240+ Domestic Resorts & Homestays',
-    recommended: true,
+    resortCount: '240+ Partner Resorts across India & Asia',
     highlights: [
-      '35 Total Holiday Nights (7 Nights annually for 5 years)',
-      'Premium 4 & 5-star resort portfolio across Goa, Coorg, Munnar & Manali',
-      'Priority reservation desk allocation for festive dates',
-      'Unutilized night carry-forward privilege to following years',
-      'Free holiday gifting for close family and friends',
-      'Zero annual maintenance surcharge in Year 1'
+      '35 Total Holiday Nights (7 Nights / 8 Days annually for 5 years)',
+      'India & Asia coverage: Coorg, Goa, Munnar, Manali, Thailand & Sri Lanka',
+      'Annual Maintenance Charge (AMC): ₹24,999 + GST',
+      'Complimentary daily buffet breakfast for 2 Adults + 2 Kids',
+      'Flexible holiday splitting (2 or 3-night mini vacations)',
+      'Unutilized night carry-forward privilege to subsequent year',
+      'Holiday gifting rights for family and friends'
     ]
   },
   {
-    id: 'plan-explore-select',
-    name: 'Explore Select',
-    category: 'Explore',
-    tenureYears: 3,
-    coverage: 'Domestic + International',
-    priceINR: 385000,
-    downPaymentINR: 65000,
-    emiMonthlyINR: 6999,
+    id: 'plan-red-10yr',
+    name: 'Red Membership (10 Years)',
+    category: 'Red',
+    tierColor: 'red',
+    tenureYears: 10,
+    coverage: 'India & Asia',
+    priceINR: 899999,
+    amcINR: 24999,
+    amcLabel: '₹24,999 + GST',
+    downPaymentINR: 125000,
+    emiMonthlyINR: 12999,
     annualNights: 7,
-    totalNights: 21,
+    totalNights: 70,
     roomCategory: 'Premium Studio',
     occupancy: { adults: 2, children: 2 },
     bookingWindow: '15 to 240 days advance',
-    seasonEligibility: 'All Seasons except peak festive blackout',
+    seasonEligibility: 'All Regular & High Seasons',
     priorityBooking: true,
-    resortCount: '240+ Domestic & 45+ Global Resorts',
+    resortCount: '240+ Partner Resorts across India & Asia',
     highlights: [
-      '21 Global Holiday Nights (India + Southeast Asia & Middle East)',
-      'Partner stays across Thailand, Bali, Dubai, Sri Lanka & Malaysia',
-      'Complimentary airport lounge transfers on select bookings',
-      'Dedicated holiday concierge desk on call & WhatsApp',
-      'Special discounted rates for extra nights'
+      '70 Total Holiday Nights (7 Nights / 8 Days annually for 10 years)',
+      '10-year inflation-proof luxury vacations across India & Asia',
+      'Annual Maintenance Charge (AMC): ₹24,999 + GST locked across tenure',
+      'Priority reservation desk allocation for festive dates',
+      'Complimentary room upgrades subject to availability',
+      'Full membership transferability & heritage legacy rights',
+      'Dedicated relationship concierge desk on WhatsApp & Call'
     ]
   },
   {
-    id: 'plan-explore-elite',
-    name: 'Explore Elite',
-    category: 'Explore',
+    id: 'plan-purple-5yr',
+    name: 'Purple Membership (5 Years)',
+    category: 'Purple',
+    tierColor: 'purple',
     tenureYears: 5,
-    coverage: 'Domestic + International',
-    priceINR: 595000,
-    downPaymentINR: 95000,
-    emiMonthlyINR: 9999,
+    coverage: 'India & International',
+    priceINR: 799999,
+    amcINR: 24999,
+    amcLabel: '₹24,999 + GST',
+    downPaymentINR: 115000,
+    emiMonthlyINR: 13999,
     annualNights: 7,
     totalNights: 35,
-    roomCategory: 'Royal Suite',
+    roomCategory: 'Premium Studio',
     occupancy: { adults: 2, children: 2 },
-    bookingWindow: '7 to 365 days advance',
-    seasonEligibility: 'All 365 Days Guaranteed Access',
+    bookingWindow: '10 to 300 days advance',
+    seasonEligibility: 'All Seasons (India + International)',
     priorityBooking: true,
     resortCount: '300+ Global Luxury Properties & Villas',
+    recommended: true,
     highlights: [
       '35 Prime Global Holiday Nights across 5 years',
-      'Suite & Villa level accommodation worldwide (Maldives, Bali, Europe)',
-      'Club exchange privileges across international vacation networks',
-      'Personal travel director & bespoke itineraries included',
-      'Uncapped night gifting & transferability rights',
-      '25% food, beverage & wellness spa discounts worldwide'
+      'India & International coverage: Maldives, Bali, Dubai, Thailand, Europe',
+      'Annual Maintenance Charge (AMC): ₹24,999 + GST',
+      'Access to overwater villas, beachfront sanctuaries & mountain retreats',
+      'Complimentary airport lounge vouchers on international trips',
+      'Priority booking window up to 300 days in advance',
+      'Uncapped night gifting & transferability privileges'
+    ]
+  },
+  {
+    id: 'plan-purple-10yr',
+    name: 'Purple Membership (10 Years)',
+    category: 'Purple',
+    tierColor: 'purple',
+    tenureYears: 10,
+    coverage: 'India & International',
+    priceINR: 1399999,
+    amcINR: 39999,
+    amcLabel: '₹39,999 + GST',
+    downPaymentINR: 199000,
+    emiMonthlyINR: 21999,
+    annualNights: 7,
+    totalNights: 70,
+    roomCategory: 'Royal Suite',
+    occupancy: { adults: 2, children: 2 },
+    bookingWindow: '7 to 365 days advance (Guaranteed)',
+    seasonEligibility: 'All 365 Days Access (Zero Blackout Dates)',
+    priorityBooking: true,
+    resortCount: '350+ Global Signature Resorts & Suites',
+    highlights: [
+      '70 Global Ultra-Luxury Nights (7 Nights annually for 10 years)',
+      'The Ultimate Global Tier: Worldwide access (195 countries catalogued)',
+      'Annual Maintenance Charge (AMC): ₹39,999 + GST locked across decade',
+      'Suite & Villa level accommodation guaranteed worldwide',
+      'Personal Travel Director & bespoke holiday itineraries included',
+      '25% food, beverage & wellness spa discounts worldwide',
+      'VIP airport transfers & lounge access for member family'
     ]
   }
 ];
@@ -164,7 +182,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 2500
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '13:00',
     checkOutTime: '11:00',
     nearbyAttractions: ['Abbey Falls (6 km)', 'Raja’s Seat (4 km)', 'Dubare Elephant Camp (22 km)']
@@ -212,7 +230,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 3000
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '14:00',
     checkOutTime: '11:00',
     nearbyAttractions: ['Mattupetty Dam (11 km)', 'Eravikulam National Park (14 km)', 'Tea Museum (7 km)']
@@ -260,7 +278,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 4500
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '12:00',
     checkOutTime: '10:00',
     nearbyAttractions: ['Elephant Beach (15 min boat)', 'Kalapathar Beach (8 km)', 'Scuba Coral Trails (500 m)']
@@ -308,7 +326,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 3500
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '14:00',
     checkOutTime: '11:00',
     nearbyAttractions: ['Aguada Fort (4 km)', 'Candolim Strip (1.5 km)', 'Dolphin Bay Cruise (3 km)']
@@ -356,7 +374,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 2800
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '13:00',
     checkOutTime: '10:30',
     nearbyAttractions: ['Solang Ropeway (1.2 km)', 'Atal Tunnel (12 km)', 'Old Manali Café Trail (9 km)']
@@ -404,7 +422,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 4200
       }
     ],
-    eligiblePlans: ['Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Red Membership (5 Years)', 'Red Membership (10 Years)', 'Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Escape Select', 'Escape Elite', 'Explore Select', 'Explore Elite'],
     checkInTime: '14:00',
     checkOutTime: '12:00',
     nearbyAttractions: ['City Palace Udaipur (5 km)', 'Jag Mandir Island (4 km)', 'Saheliyon-ki-Bari (7 km)']
@@ -452,7 +470,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 5500
       }
     ],
-    eligiblePlans: ['Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Explore Select', 'Explore Elite'],
     checkInTime: '14:00',
     checkOutTime: '12:00',
     nearbyAttractions: ['Tegallalang Rice Terraces (3 km)', 'Sacred Monkey Forest (8 km)', 'Ubud Palace (7 km)']
@@ -500,7 +518,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 7500
       }
     ],
-    eligiblePlans: ['Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Explore Select', 'Explore Elite'],
     checkInTime: '15:00',
     checkOutTime: '12:00',
     nearbyAttractions: ['Banana Reef Diving Spot (10 min boat)', 'Malé City Tour (25 min speedboat)']
@@ -548,7 +566,7 @@ export const INITIAL_RESORTS: Resort[] = [
         upgradeFeePerNightINR: 5200
       }
     ],
-    eligiblePlans: ['Explore Select', 'Explore Elite'],
+    eligiblePlans: ['Purple Membership (5 Years)', 'Purple Membership (10 Years)', 'Explore Select', 'Explore Elite'],
     checkInTime: '14:00',
     checkOutTime: '12:00',
     nearbyAttractions: ['Kata Noi Beach (300 m)', 'Big Buddha Phuket (7 km)', 'Promthep Cape (8 km)']
@@ -557,12 +575,12 @@ export const INITIAL_RESORTS: Resort[] = [
 
 export const INITIAL_MEMBER: MemberUser = {
   id: 'usr-10492',
-  membershipId: 'MYH-EXP-5028',
+  membershipId: 'MYH-PUR-5028',
   name: 'Rajesh Makwana',
   email: 'utkarshmakwana31@gmail.com',
   phone: '+91 73533 33701',
-  planId: 'plan-explore-elite',
-  planName: 'Explore Elite',
+  planId: 'plan-purple-5yr',
+  planName: 'Purple Membership (5 Years)',
   status: 'Active',
   startDate: '2025-04-15',
   expiryDate: '2030-04-14',

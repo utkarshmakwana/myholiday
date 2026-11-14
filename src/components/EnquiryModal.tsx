@@ -166,10 +166,10 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   onChange={(e) => setPlan(e.target.value)}
                   className="w-full bg-neutral-50 border border-neutral-300 rounded-lg p-2.5 text-neutral-800 focus:outline-none focus:ring-1 focus:ring-[#15803D]"
                 >
-                  <option value="Escape Select">Escape Select (3 Yrs Domestic)</option>
-                  <option value="Escape Elite">Escape Elite (5 Yrs Domestic - Most Popular)</option>
-                  <option value="Explore Select">Explore Select (3 Yrs Global)</option>
-                  <option value="Explore Elite">Explore Elite (5 Yrs Global Luxury)</option>
+                  <option value="Red Membership (5 Years)">Red Membership (5 Years - India & Asia - ₹4,99,999)</option>
+                  <option value="Red Membership (10 Years)">Red Membership (10 Years - India & Asia - ₹8,99,999)</option>
+                  <option value="Purple Membership (5 Years)">Purple Membership (5 Years - India & Intl - ₹7,99,999)</option>
+                  <option value="Purple Membership (10 Years)">Purple Membership (10 Years - India & Intl - ₹13,99,999)</option>
                 </select>
               </div>
 

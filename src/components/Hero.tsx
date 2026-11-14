@@ -222,23 +222,23 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePlans, onExploreResorts, on
           </form>
         </div>
 
-        {/* Quantitative Proof Metrics Strip */}
-        <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white">
-          <div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#4ade80] font-tabular">240+</div>
-            <div className="text-xs text-emerald-100 font-light mt-0.5">Verified Properties Across 50+ Destinations</div>
+        {/* Quantitative Proof Metrics Strip from Official Brand Showcase (Image 2) */}
+        <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+          <div className="flex flex-col items-center">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">240+</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Partner Resorts</div>
           </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#4ade80] font-tabular">7 Nights/Yr</div>
-            <div className="text-xs text-emerald-100 font-light mt-0.5">Guaranteed Annual Vacation Entitlements</div>
+          <div className="flex flex-col items-center">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">50+</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Destinations</div>
           </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#4ade80] font-tabular">₹4,999/mo</div>
-            <div className="text-xs text-emerald-100 font-light mt-0.5">Affordable No-Cost EMI Financing Plans</div>
+          <div className="flex flex-col items-center">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">15,000+</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Happy Members</div>
           </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-[#4ade80] font-tabular">14,000+</div>
-            <div className="text-xs text-emerald-100 font-light mt-0.5">Happy Family Holidayers on myholidayz.in</div>
+          <div className="flex flex-col items-center">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E05344] font-serif tracking-tight">24+</div>
+            <div className="text-xs sm:text-sm text-neutral-300 font-medium mt-1">Hour Support</div>
           </div>
         </div>
       </div>

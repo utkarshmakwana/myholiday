@@ -3,10 +3,13 @@ export type AppMode = 'website' | 'member-portal' | 'sales-crm' | 'admin' | 'ai-
 export interface MembershipPlan {
   id: string;
   name: string;
-  category: 'Escape' | 'Explore';
+  category: 'Red' | 'Purple' | 'Escape' | 'Explore';
+  tierColor?: 'red' | 'purple';
   tenureYears: number;
-  coverage: 'Domestic' | 'Domestic + International';
+  coverage: 'India & Asia' | 'India & International' | 'Domestic' | 'Domestic + International';
   priceINR: number;
+  amcINR?: number;
+  amcLabel?: string;
   downPaymentINR: number;
   emiMonthlyINR: number;
   annualNights: number;

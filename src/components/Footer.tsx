@@ -66,19 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
                   }}
                   className="hover:text-white transition-colors"
                 >
-                  Escape Select (3 Yrs Domestic)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
-                    onSelectMode('website');
-                    const el = document.getElementById('membership-plans-section');
-                    el?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="hover:text-white transition-colors text-emerald-400 font-semibold"
-                >
-                  Escape Elite (5 Yrs - Popular)
+                  Red Membership (5 Yrs - India & Asia)
                 </button>
               </li>
               <li>
@@ -90,7 +78,19 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
                   }}
                   className="hover:text-white transition-colors"
                 >
-                  Explore Select (3 Yrs Global)
+                  Red Membership (10 Yrs - India & Asia)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    onSelectMode('website');
+                    const el = document.getElementById('membership-plans-section');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-white transition-colors text-purple-300 font-semibold"
+                >
+                  Purple Membership (5 Yrs - Popular)
                 </button>
               </li>
               <li>
@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectMode, onOpenEnquiry }) =
                   }}
                   className="hover:text-white transition-colors"
                 >
-                  Explore Elite (5 Yrs Global)
+                  Purple Membership (10 Yrs - Worldwide)
                 </button>
               </li>
             </ul>
