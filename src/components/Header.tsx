@@ -13,9 +13,7 @@ import {
   MessageCircle,
   Menu,
   X,
-  ChevronRight,
-  Download,
-  BookOpen
+  ChevronRight
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -121,10 +119,9 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
           <button
             onClick={() => handleNavClick('destination-catalogues-section')}
-            className="hover:text-[#15803D] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1 text-emerald-800"
+            className="hover:text-[#15803D] transition-colors whitespace-nowrap shrink-0"
           >
-            <span>Catalogues</span>
-            <span className="text-[10px] bg-emerald-100 text-[#15803D] px-1.5 py-0.2 rounded font-bold">PDF</span>
+            Destinations
           </button>
           <button
             onClick={() => handleNavClick('how-it-works-section')}
@@ -203,13 +200,13 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={() => handleNavClick('destination-catalogues-section')}
-              className="w-full text-left py-2.5 px-3 text-sm font-semibold text-emerald-800 bg-emerald-50/60 rounded-lg transition-colors flex items-center justify-between"
+              className="w-full text-left py-2.5 px-3 text-sm font-semibold text-neutral-800 hover:bg-emerald-50 hover:text-[#15803D] rounded-lg transition-colors flex items-center justify-between"
             >
               <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-[#15803D]" />
-                <span>Travel Catalogues & PDF Guides</span>
+                <Compass className="w-4 h-4 text-[#15803D]" />
+                <span>Explore Destinations & Themes</span>
               </div>
-              <span className="text-[10px] bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded">PDF</span>
+              <ChevronRight className="w-4 h-4 text-neutral-400" />
             </button>
 
             <button
@@ -229,29 +226,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
 
-          {/* Quick PDF Downloads on Mobile */}
-          <div className="pt-2 border-t border-neutral-100 grid grid-cols-2 gap-2">
-            <a
-              href="/catalogues/MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 bg-neutral-100 rounded-lg text-neutral-800 text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-emerald-100 transition-colors"
-            >
-              <Download className="w-3.5 h-3.5 text-[#15803D]" />
-              <span>Kids PDF</span>
-            </a>
-            <a
-              href="/catalogues/My_Holidays_Historical_Destinations_Catalogue.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 bg-neutral-100 rounded-lg text-neutral-800 text-xs font-semibold flex items-center justify-center gap-1.5 hover:bg-amber-100 transition-colors"
-            >
-              <Download className="w-3.5 h-3.5 text-amber-700" />
-              <span>Heritage PDF</span>
-            </a>
-          </div>
+
 
           {/* Direct Mobile Quick Contact Buttons */}
           <div className="pt-2 border-t border-neutral-100 flex items-center gap-2">

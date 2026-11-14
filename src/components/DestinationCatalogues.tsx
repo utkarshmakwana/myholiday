@@ -10,30 +10,20 @@ import {
   HISTORICAL_INDIAN_DESTINATIONS,
   HISTORICAL_INTERNATIONAL_DESTINATIONS,
   SAMPLE_CATALOGUE_ITINERARIES,
-  HolidayThemeCategory,
-  WildlifeDestinationItem,
-  KidsDestinationItem,
-  HistoricalDestinationItem,
   SampleItinerary
 } from '../data/catalogueData';
 import {
   Compass,
-  FileText,
-  Download,
   Calendar,
   MapPin,
   Clock,
-  Sparkles,
   ArrowRight,
-  ShieldCheck,
   Search,
   CheckCircle2,
   TreePine,
   Landmark,
   Baby,
-  Globe2,
-  Eye,
-  Info
+  Globe2
 } from 'lucide-react';
 
 interface DestinationCataloguesProps {
@@ -59,63 +49,21 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-[#15803D] rounded-full text-xs font-bold uppercase tracking-wider border border-emerald-300">
             <Compass className="w-3.5 h-3.5" />
-            <span>Official Destination Catalogues</span>
+            <span>Curated Travel Inspirations</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
-            MY HOLIDAYS Destination Catalogues & Holiday Themes
+            Explore 195 Countries & 1,000+ Popular Destinations
           </h2>
 
           <p className="text-sm sm:text-base text-neutral-600 font-light">
-            Explore curated itineraries, best visiting seasons, wildlife sanctuaries, and family adventures across 195 countries and 1,000+ popular tourist destinations.
+            Comprehensive holiday inspirations covering Wildlife Safaris, World Heritage Monuments, and Kids Dream Parks natively integrated into your membership vacations.
           </p>
-        </div>
-
-        {/* Official PDF Download Center */}
-        <div className="mt-8 bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] rounded-2xl p-6 text-white shadow-lg border border-slate-700">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="space-y-1.5 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider">
-                <FileText className="w-4 h-4 text-emerald-400" />
-                <span>Official Download Center</span>
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">
-                Download Official PDF Travel Catalogues
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-300 max-w-2xl font-light">
-                Instant access to our comprehensive Kids Dream Destinations and Historical Heritage Travel inspiration guides for your family vacation planning.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full lg:w-auto shrink-0">
-              <a
-                href="/catalogues/MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
-                download="MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                <Download className="w-4 h-4" />
-                <span>Kids Dream Catalogue (PDF)</span>
-              </a>
-
-              <a
-                href="/catalogues/My_Holidays_Historical_Destinations_Catalogue.pdf"
-                download="My_Holidays_Historical_Destinations_Catalogue.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-4 py-2.5 bg-amber-600 hover:bg-amber-700 active:scale-[0.98] text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                <Download className="w-4 h-4" />
-                <span>Historical Destinations (PDF)</span>
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Main Category Navigation Tabs */}
         <div className="mt-10 flex justify-center">
-          <div className="inline-flex p-1.5 bg-white border border-neutral-200 rounded-xl shadow-xs overflow-x-auto max-w-full">
+          <div className="inline-flex p-1.5 bg-white border border-neutral-200 rounded-xl shadow-xs overflow-x-auto max-w-full no-scrollbar">
             <button
               onClick={() => { setActiveMainTab('wildlife'); setSearchQuery(''); }}
               className={`px-4 sm:px-5 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap ${
@@ -161,7 +109,7 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
               }`}
             >
               <Globe2 className="w-4 h-4" />
-              <span>10 Holiday Themes & Master Catalogue</span>
+              <span>10 Holiday Themes & Master Plan</span>
             </button>
           </div>
         </div>
@@ -326,7 +274,7 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
           </div>
         )}
 
-        {/* TAB 2: HISTORICAL DESTINATIONS (From PDF) */}
+        {/* TAB 2: HISTORICAL DESTINATIONS */}
         {activeMainTab === 'historical' && (
           <div className="mt-10 space-y-8">
             <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -342,16 +290,10 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
                 </p>
               </div>
 
-              <a
-                href="/catalogues/My_Holidays_Historical_Destinations_Catalogue.pdf"
-                download="My_Holidays_Historical_Destinations_Catalogue.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-1.5 shadow-xs"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Full Heritage PDF (8 Pages)</span>
-              </a>
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-amber-100 text-amber-900 rounded-lg text-xs font-semibold border border-amber-300">
+                <Landmark className="w-3.5 h-3.5 text-amber-700" />
+                <span>50 UNESCO & Heritage Wonders</span>
+              </div>
             </div>
 
             {/* Scope Toggle & Search */}
@@ -447,7 +389,7 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
           </div>
         )}
 
-        {/* TAB 3: KIDS DREAM DESTINATIONS (From PDF) */}
+        {/* TAB 3: KIDS DREAM DESTINATIONS */}
         {activeMainTab === 'kids' && (
           <div className="mt-10 space-y-8">
             <div className="bg-purple-50/70 border border-purple-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -463,16 +405,10 @@ export const DestinationCatalogues: React.FC<DestinationCataloguesProps> = ({
                 </p>
               </div>
 
-              <a
-                href="/catalogues/MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
-                download="MY_HOLIDAYS_Kids_Dream_Destinations_Catalogue.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded-lg text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-1.5 shadow-xs"
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>Full Kids Dream PDF (6 Pages)</span>
-              </a>
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-purple-100 text-purple-900 rounded-lg text-xs font-semibold border border-purple-300">
+                <Baby className="w-3.5 h-3.5 text-purple-700" />
+                <span>38 Family & Kids Theme Parks</span>
+              </div>
             </div>
 
             {/* Scope Toggle & Search */}
